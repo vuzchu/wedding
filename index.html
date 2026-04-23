@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế Hoạch Đám Cưới — Timeline & Chi Phí</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --gold: #c9a96e;
+            --gold-light: #e8d5a3;
+            --gold-bright: #f0c75e;
+            --gold-dark: #8b7340;
+            --gold-glow: rgba(201,169,110,0.15);
+            --bg: #0e0d0a;
+            --bg2: #171510;
+            --bg3: #1e1b15;
+            --card: rgba(201,169,110,0.035);
+            --card-hover: rgba(201,169,110,0.07);
+            --text: #f2ede4;
+            --text2: #b5aa9a;
+            --text3: #7d7468;
+            --border: rgba(201,169,110,0.1);
+            --border2: rgba(201,169,110,0.22);
+            --red: #d46a6a;
+            --green: #6abf8a;
+            --blue: #6a9fd4;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        ::selection { background: var(--gold); color: var(--bg); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg2); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+        /* === NAV === */
+        nav {
+            position: fixed; top:0; left:0; right:0; z-index:100;
+            background: rgba(14,13,10,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all .3s;
+        }
+        nav.scrolled { background: rgba(14,13,10,0.95); }
+        .nav-inner {
+            max-width: 1200px; margin: auto;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 24px; height: 60px;
+        }
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600; font-size: 18px; color: var(--gold);
+            letter-spacing: 1px;
+        }
+        .nav-links { display:flex; gap:6px; }
+        .nav-links a {
+            color: var(--text2); text-decoration:none; font-size:13px; font-weight:500;
+            padding: 6px 14px; border-radius: 20px;
+            transition: all .25s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--gold); background: var(--gold-glow);
+        }
+        .btn-print {
+            background: transparent; border: 1px solid var(--border2);
+            color: var(--gold); padding: 6px 14px; border-radius: 20px;
+            font-size: 13px; cursor:pointer; transition: all .25s;
+            font-family: inherit;
+        }
+        .btn-print:hover { background: var(--gold-glow); border-color: var(--gold); }
+
+        /* === HERO === */
+        .hero {
+            min-height: 100vh; display:flex; flex-direction:column;
+            align-items:center; justify-content:center; text-align:center;
+            padding: 120px 24px 80px;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content:''; position:absolute; inset:0;
+            background:
+                radial-gradient(ellipse 60% 50% at 50% 40%, rgba(201,169,110,0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 30% 70%, rgba(201,169,110,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 30% at 70% 30%, rgba(201,169,110,0.03) 0%, transparent 60%);
+        }
+        .hero-badge {
+            display: inline-flex; align-items:center; gap:8px;
+            padding: 8px 20px; border-radius: 30px;
+            border: 1px solid var(--border2);
+            background: var(--card);
+            font-size: 13px; color: var(--gold-light);
+            margin-bottom: 32px; position:relative; z-index:1;
+            animation: fadeDown .8s ease-out;
+        }
+        .hero-badge i { font-size:11px; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 72px);
+            font-weight: 700; line-height: 1.15;
+            position:relative; z-index:1;
+            animation: fadeDown 1s ease-out;
+        }
+        .hero h1 .gold { color: var(--gold); }
+        .hero-sub {
+            font-size: clamp(15px, 2vw, 18px);
+            color: var(--text2); margin-top: 20px;
+            max-width: 600px; position:relative; z-index:1;
+            animation: fadeDown 1.2s ease-out;
+        }
+        .hero-line {
+            width: 60px; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 36px auto; position:relative; z-index:1;
+            animation: fadeDown 1.4s ease-out;
+        }
+        .hero-scroll {
+            position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+            color: var(--text3); font-size:13px;
+            display:flex; flex-direction:column; align-items:center; gap:8px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .hero-scroll i { font-size:16px; color: var(--gold-dark); }
+
+        /* === FLOATING PARTICLES === */
+        .particles {
+            position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0;
+        }
+        .particle {
+            position:absolute; width:3px; height:3px;
+            background: var(--gold); border-radius:50%;
+            opacity: 0; animation: particleFloat linear infinite;
+        }
+        @keyframes particleFloat {
+            0% { opacity:0; transform:translateY(100vh) scale(0); }
+            10% { opacity:0.6; }
+            90% { opacity:0.3; }
+            100% { opacity:0; transform:translateY(-10vh) scale(1); }
+        }
+
+        /* === SECTION COMMON === */
+        .section {
+            max-width: 1100px; margin: auto;
+            padding: 80px 24px;
+        }
+        .section-label {
+            display:inline-flex; align-items:center; gap:8px;
+            font-size:12px; font-weight:600; color: var(--gold);
+            text-transform:uppercase; letter-spacing:3px;
+            margin-bottom:12px;
+        }
+        .section-label::before {
+            content:''; width:20px; height:1px; background: var(--gold);
+        }
+        .section-title {
+            font-family:'Playfair Display',serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight:600; margin-bottom:12px;
+        }
+        .section-desc {
+            color: var(--text2); font-size:15px;
+            max-width:600px; margin-bottom:48px;
+        }
+
+        /* === STATS DASHBOARD === */
+        .stats-grid {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap:16px; margin-bottom:20px;
+        }
+        .stat-card {
+            background: var(--card);
+            border:1px solid var(--border);
+            border-radius:16px; padding:24px;
+            transition: all .3s;
+            position:relative; overflow:hidden;
+        }
+        .stat-card:hover {
+            background: var(--card-hover);
+            border-color: var(--border2);
+            transform: translateY(-2px);
+        }
+        .stat-card::after {
+            content:''; position:absolute; top:0; left:0; right:0;
+            height:2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity:0; transition: opacity .3s;
+        }
+        .stat-card:hover::after { opacity:1; }
+        .stat-icon {
+            width:40px; height:40px; border-radius:10px;
+            background: var(--gold-glow);
+            display:flex; align-items:center; justify-content:center;
+            color: var(--gold); font-size:16px; margin-bottom:16px;
+        }
+        .stat-value {
+            font-family:'Playfair Display',serif;
+            font-size:28px; font-weight:700; color: var(--text);
+            line-height:1.2;
+        }
+        .stat-value .unit { font-size:16px; color: var(--text2); font-weight:400; }
+        .stat-label { font-size:13px; color: var(--text3); margin-top:4px; }
+
+        /* === PROGRESS BAR === */
+        .progress-wrap {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:12px; padding:20px 24px;
+            display:flex; align-items:center; gap:16px;
+        }
+        .progress-bar-bg {
+            flex:1; height:8px; background: var(--bg3);
+            border-radius:4px; overflow:hidden;
+        }
+        .progress-bar-fill {
+            height:100%; border-radius:4px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright));
+            width:0%; transition: width 1.5s ease-out;
+        }
+        .progress-text { font-size:14px; color: var(--gold); font-weight:600; white-space:nowrap; }
+
+        /* === TIMELINE === */
+        .timeline { position:relative; padding-left:40px; }
+        .timeline::before {
+            content:''; position:absolute;
+            left:15px; top:0; bottom:0;
+            width:2px;
+            background: linear-gradient(180deg, var(--gold-dark), var(--border), transparent);
+        }
+        .tl-phase { margin-bottom:48px; position:relative; }
+        .tl-dot {
+            position:absolute; left:-33px; top:0;
+            width:14px; height:14px; border-radius:50%;
+            background: var(--bg); border:2px solid var(--gold);
+            z-index:2; transition: all .3s;
+        }
+        .tl-dot.active {
+            background: var(--gold);
+            box-shadow: 0 0 12px var(--gold-glow);
+        }
+        .tl-phase-header {
+            display:flex; align-items:center; gap:12px;
+            margin-bottom:16px; flex-wrap:wrap;
+        }
+        .tl-phase-tag {
+            font-size:11px; font-weight:700; color:var(--bg);
+            background: var(--gold); padding:3px 10px;
+            border-radius:4px; letter-spacing:1px; text-transform:uppercase;
+        }
+        .tl-phase-name {
+            font-family:'Playfair Display',serif;
+            font-size:20px; font-weight:600;
+        }
+        .tl-phase-time {
+            font-size:13px; color:var(--text3); margin-left:auto;
+        }
+        .tl-tasks { display:flex; flex-direction:column; gap:6px; }
+        .tl-task {
+            display:flex; align-items:flex-start; gap:12px;
+            padding:10px 16px; border-radius:10px;
+            background: var(--card); border:1px solid transparent;
+            transition: all .25s; cursor:pointer;
+        }
+        .tl-task:hover {
+            background: var(--card-hover); border-color: var(--border);
+        }
+        .tl-task input[type="checkbox"] {
+            appearance:none; -webkit-appearance:none;
+            width:18px; height:18px; min-width:18px;
+            border:1.5px solid var(--text3); border-radius:5px;
+            cursor:pointer; transition:all .25s; margin-top:2px;
+            position:relative;
+        }
+        .tl-task input[type="checkbox"]:checked {
+            background: var(--gold); border-color: var(--gold);
+        }
+        .tl-task input[type="checkbox"]:checked::after {
+            content:'✓'; position:absolute;
+            top:50%; left:50%; transform:translate(-50%,-50%);
+            font-size:11px; color:var(--bg); font-weight:700;
+        }
+        .tl-task.checked .tl-task-text {
+            text-decoration: line-through; color: var(--text3);
+        }
+        .tl-task-text { font-size:14px; color:var(--text2); transition:all .25s; }
+        .tl-task-sub { font-size:12px; color:var(--text3); margin-top:2px; }
+        .tl-day-schedule {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:12px; overflow:hidden;
+        }
+        .tl-day-item {
+            display:flex; gap:16px; padding:12px 20px;
+            border-bottom:1px solid var(--border);
+            transition: background .2s;
+        }
+        .tl-day-item:last-child { border-bottom:none; }
+        .tl-day-item:hover { background: var(--card-hover); }
+        .tl-day-time {
+            font-size:13px; font-weight:600; color:var(--gold);
+            min-width:65px; padding-top:1px;
+        }
+        .tl-day-desc { font-size:14px; color:var(--text2); }
+
+        /* === TABLE === */
+        .table-wrap {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:16px; overflow:hidden;
+        }
+        table { width:100%; border-collapse:collapse; }
+        thead { background: var(--bg3); }
+        th {
+            padding:14px 20px; text-align:left;
+            font-size:12px; font-weight:600; color:var(--gold);
+            text-transform:uppercase; letter-spacing:1.5px;
+            border-bottom:1px solid var(--border);
+        }
+        td {
+            padding:14px 20px; font-size:14px; color:var(--text2);
+            border-bottom:1px solid var(--border);
+        }
+        tr:last-child td { border-bottom:none; }
+        tr:hover td { background: var(--card-hover); }
+        .tbl-total td {
+            background: var(--gold-glow) !important;
+            font-weight:700; color:var(--gold) !important;
+            font-size:15px;
+        }
+        .tbl-icon { color:var(--gold); margin-right:8px; font-size:13px; }
+
+        /* === BUDGET === */
+        .budget-category {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:14px; margin-bottom:12px;
+            overflow:hidden; transition: all .3s;
+        }
+        .budget-category:hover { border-color: var(--border2); }
+        .budget-cat-header {
+            padding:18px 24px; display:flex; align-items:center;
+            gap:16px; cursor:pointer; transition: background .2s;
+            user-select:none;
+        }
+        .budget-cat-header:hover { background: var(--card-hover); }
+        .budget-cat-letter {
+            width:36px; height:36px; border-radius:8px;
+            background: var(--gold-glow);
+            display:flex; align-items:center; justify-content:center;
+            font-family:'Playfair Display',serif;
+            font-size:16px; font-weight:700; color:var(--gold);
+            flex-shrink:0;
+        }
+        .budget-cat-info { flex:1; min-width:0; }
+        .budget-cat-name { font-size:15px; font-weight:600; }
+        .budget-cat-count { font-size:12px; color:var(--text3); }
+        .budget-cat-amount {
+            font-family:'Playfair Display',serif;
+            font-size:18px; font-weight:700; color:var(--gold-light);
+            white-space:nowrap;
+        }
+        .budget-cat-pct {
+            font-size:12px; color:var(--text3); min-width:40px; text-align:right;
+        }
+        .budget-cat-toggle {
+            color:var(--text3); font-size:12px;
+            transition: transform .3s;
+        }
+        .budget-cat-toggle.open { transform: rotate(180deg); }
+        .budget-bar-wrap {
+            padding:0 24px 0 76px; margin-bottom:14px;
+        }
+        .budget-bar-bg {
+            height:6px; background:var(--bg3); border-radius:3px; overflow:hidden;
+        }
+        .budget-bar-fill {
+            height:100%; border-radius:3px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+            width:0%; transition: width 1.2s ease-out;
+        }
+        .budget-sub {
+            max-height:0; overflow:hidden;
+            transition: max-height .4s ease-out;
+        }
+        .budget-sub.open { max-height:600px; }
+        .budget-sub-inner {
+            padding:0 24px 18px 76px;
+            display:flex; flex-direction:column; gap:8px;
+        }
+        .budget-sub-item {
+            display:flex; justify-content:space-between; align-items:center;
+            font-size:13px; padding:6px 0;
+            border-bottom:1px solid rgba(201,169,110,0.05);
+        }
+        .budget-sub-item:last-child { border-bottom:none; }
+        .budget-sub-name { color:var(--text3); }
+        .budget-sub-amount { color:var(--text2); font-weight:500; }
+
+        /* Budget summary */
+        .budget-summary {
+            display:grid; grid-template-columns: 1fr 1fr 1fr;
+            gap:16px; margin-top:32px;
+        }
+        .budget-sum-card {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:14px; padding:20px; text-align:center;
+        }
+        .budget-sum-card.main {
+            border-color: var(--border2);
+            background: var(--gold-glow);
+        }
+        .budget-sum-label { font-size:12px; color:var(--text3); text-transform:uppercase; letter-spacing:1px; }
+        .budget-sum-value {
+            font-family:'Playfair Display',serif;
+            font-size:24px; font-weight:700; margin-top:4px;
+        }
+        .budget-sum-card.main .budget-sum-value { color: var(--gold-bright); font-size:28px; }
+
+        /* === VENUE === */
+        .venue-card {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:18px; overflow:hidden;
+            transition: all .3s;
+        }
+        .venue-card:hover { border-color: var(--border2); transform:translateY(-3px); }
+        .venue-img {
+            width:100%; height:240px; object-fit:cover;
+            border-bottom:1px solid var(--border);
+        }
+        .venue-body { padding:28px; }
+        .venue-name {
+            font-family:'Playfair Display',serif;
+            font-size:22px; font-weight:600; margin-bottom:4px;
+        }
+        .venue-loc { font-size:13px; color:var(--gold); margin-bottom:16px; }
+        .venue-loc i { margin-right:4px; }
+        .venue-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+        .venue-tag {
+            font-size:11px; padding:4px 12px; border-radius:20px;
+            background:var(--bg3); color:var(--text2); border:1px solid var(--border);
+        }
+        .venue-details { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        .venue-detail-item {
+            display:flex; align-items:center; gap:10px;
+            font-size:13px; color:var(--text2);
+        }
+        .venue-detail-item i { color:var(--gold-dark); width:16px; text-align:center; }
+        .venue-note {
+            margin-top:20px; padding:16px; border-radius:10px;
+            background:rgba(201,169,110,0.05); border-left:3px solid var(--gold);
+            font-size:13px; color:var(--text2); line-height:1.8;
+        }
+
+        /* === NOTES === */
+        .notes-grid {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+            gap:16px;
+        }
+        .note-card {
+            background: var(--card); border:1px solid var(--border);
+            border-radius:14px; padding:24px;
+        }
+        .note-card-title {
+            font-size:15px; font-weight:600; margin-bottom:12px;
+            display:flex; align-items:center; gap:8px;
+        }
+        .note-card-title i { color:var(--gold); font-size:14px; }
+        .note-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+        .note-list li {
+            font-size:13px; color:var(--text2);
+            padding-left:16px; position:relative;
+        }
+        .note-list li::before {
+            content:''; position:absolute; left:0; top:8px;
+            width:5px; height:5px; border-radius:50%;
+            background: var(--gold-dark);
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align:center; padding:48px 24px;
+            border-top:1px solid var(--border);
+            color:var(--text3); font-size:13px;
+        }
+        footer .gold { color:var(--gold); }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeDown {
+            from { opacity:0; transform:translateY(-20px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+        @keyframes float {
+            0%,100% { transform:translateX(-50%) translateY(0); }
+            50% { transform:translateX(-50%) translateY(-8px); }
+        }
+        .reveal {
+            opacity:0; transform:translateY(30px);
+            transition: opacity .7s ease-out, transform .7s ease-out;
+        }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        /* === RESPONSIVE === */
+        @media (max-width:768px) {
+            .nav-links { display:none; }
+            .stats-grid { grid-template-columns:1fr 1fr; }
+            .budget-summary { grid-template-columns:1fr; }
+            .venue-details { grid-template-columns:1fr; }
+            .timeline { padding-left:32px; }
+            .timeline::before { left:11px; }
+            .tl-dot { left:-29px; width:12px; height:12px; }
+            .tl-phase-time { margin-left:0; width:100%; }
+            .budget-bar-wrap, .budget-sub-inner { padding-left:20px; }
+            th, td { padding:10px 14px; font-size:13px; }
+            .budget-cat-header { padding:14px 16px; gap:10px; }
+            .budget-cat-amount { font-size:15px; }
+            .section { padding:48px 16px; }
+        }
+        @media (max-width:480px) {
+            .stats-grid { grid-template-columns:1fr; }
+            .hero h1 { font-size:32px; }
+        }
+
+        /* === PRINT === */
+        @media print {
+            nav, .hero-scroll, .btn-print, .tl-task input[type="checkbox"],
+            .budget-cat-toggle { display:none !important; }
+            body { background:#fff; color:#222; }
+            .hero { min-height:auto; padding:40px 0; }
+            .hero::before { display:none; }
+            .hero h1, .hero-sub { color:#222; }
+            .stat-card, .budget-category, .venue-card, .note-card, .table-wrap {
+                background:#fafafa; border-color:#ddd; break-inside:avoid;
+            }
+            .section-title { color:#222; }
+            .budget-cat-amount, .stat-value { color:#333; }
+            .timeline::before { background:#ccc; }
+            .tl-dot { border-color:#999; }
+            .section { padding:24px 0; }
+            .reveal { opacity:1 !important; transform:none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <div class="nav-brand"><i class="fa-solid fa-heart" style="font-size:14px;margin-right:6px;"></i>Wedding Plan</div>
+        <div class="nav-links">
+            <a href="#overview">Tổng quan</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#guests">Khách mời</a>
+            <a href="#budget">Chi phí</a>
+            <a href="#venue">Địa điểm</a>
+            <a href="#notes">Ghi chú</a>
+        </div>
+        <button class="btn-print" onclick="window.print()">
+            <i class="fa-solid fa-print" style="margin-right:4px;"></i> In / PDF
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="particles" id="particles"></div>
+    <div class="hero-badge"><i class="fa-solid fa-ring"></i> Kế hoạch tổ chức đám cưới</div>
+    <h1>Đám Cưới <span class="gold">Hoàn Hảo</span></h1>
+    <p class="hero-sub">Timeline chi tiết, phân bổ ngân sách 500 triệu, đầy đủ lễ Hằng Thuận, lễ trước kết hôn và mọi khâu chuẩn bị.</p>
+    <div class="hero-line"></div>
+    <div class="hero-scroll">
+        <span>Cuộn xuống</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="section" id="overview">
+    <div class="section-label">Tổng quan</div>
+    <h2 class="section-title">Bức tranh toàn cảnh</h2>
+    <p class="section-desc">Tổng hợp các con số quan trọng nhất cho ngày vui của hai bạn.</p>
+
+    <div class="stats-grid">
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div class="stat-value"><span class="counter" data-target="500">0</span><span class="unit"> triệu</span></div>
+            <div class="stat-label">Tổng ngân sách</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-value"><span class="counter" data-target="450">0</span><span class="unit"> người</span></div>
+            <div class="stat-label">Tổng khách mời (~45 bàn)</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="stat-value">90 <span class="unit">ngày</span></div>
+            <div class="stat-label">Thời gian chuẩn bị</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="stat-value">14 <span class="unit">hạng mục</span></div>
+            <div class="stat-label">Nhóm chi phí</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-landmark"></i></div>
+            <div class="stat-value">3 <span class="unit">lễ chính</span></div>
+            <div class="stat-label">Hằng Thuận / Hỏi / Cưới</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div class="stat-value" id="taskCount">0<span class="unit"> / 0</span></div>
+            <div class="stat-label">Công việc đã hoàn thành</div>
+        </div>
+    </div>
+
+    <div class="progress-wrap reveal" style="margin-top:16px;">
+        <span style="font-size:13px;color:var(--text3);white-space:nowrap;">Tiến độ</span>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+        <span class="progress-text" id="progressText">0%</span>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+    <div class="section-label">Timeline</div>
+    <h2 class="section-title">Lộ trình 90 ngày</h2>
+    <p class="section-desc">Chi tiết từng giai đoạn, từ chuẩn bị đến ngày cưới. Đánh dấu checkbox để theo dõi tiến độ.</p>
+
+    <div class="timeline">
+        <!-- Phase 1 -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot active"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 1</span>
+                <span class="tl-phase-name">Chuẩn bị nền tảng</span>
+                <span class="tl-phase-time">D-90 → D-60</span>
+            </div>
+            <div class="tl-tasks">
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Khảo sát 3-5 sảnh tiệc, chốt địa điểm (The Adora 2)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đặt cọc sảnh tiệc (thường 30-50% tổng sảnh)</span><div class="tl-task-sub">→ Khoảng 40-67 triệu cọc trước</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Liên hệ chùa, đặt ngày Lễ Hằng Thuận</span><div class="tl-task-sub">→ Nên chọn ngày tốt theo tuổi hai bạn</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Khảo sát studio chụp ảnh pre-wedding (ít nhất 3 nơi)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đi xem nhẫn đính hôn và nhẫn cưới</span><div class="tl-task-sub">→ So sánh PNJ, SJC, DOJI, tiệm vàng uy tín</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Lên danh sách khách mời sơ bộ (2 bên)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Báo cáo ngày cưới cho công ty, xin nghỉ phép</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Mở tài khoản riêng / phân bổ quỹ cưới</span></label>
+            </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot active"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 2</span>
+                <span class="tl-phase-name">Triển khai & Lễ Hằng Thuận</span>
+                <span class="tl-phase-time">D-60 → D-30</span>
+            </div>
+            <div class="tl-tasks">
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text" style="color:var(--gold-light);font-weight:600;">Tổ chức Lễ Hằng Thuận tại chùa</span><div class="tl-task-sub">→ Cô dâu chú rể + phụ huynh 2 bên (~10-15 người tham gia)</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị đồ cúng Lễ Hằng Thuận: hoa tươi, trái cây, nhang, đèn, nến, trầu cau</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Thuê/may áo dài đi chùa cho cô dâu</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chụp ảnh pre-wedding (1 ngày full)</span><div class="tl-task-sub">→ Studio + ngoại cảnh. Uống nước, mang đồ ăn nhẹ</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đặt cọc chụp ảnh ngày cưới + quay phim</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đến tiệm váy cưới, thử váy (chốt 3 bộ: váy lễ + 2 váy đổi)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Thuê vest chú rể (chốt vest lễ + vest tiệc)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Liên hệ và chốt MC (xem video MC trước)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chốt đơn vị trang trí sảnh tiệc, lên concept</span><div class="tl-task-sub">→ Chọn màu sắc chủ đạo, phong cách (sang trọng/romantic/garden...)</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đặt làm thiệp cưới (chọn mẫu, in thử)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chốt mua nhẫn đính hôn + nhẫn cưới</span></label>
+            </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot active"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 3</span>
+                <span class="tl-phase-name">Chốt chặn & Lễ dâng hương họ</span>
+                <span class="tl-phase-time">D-30 → D-14</span>
+            </div>
+            <div class="tl-tasks">
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text" style="color:var(--gold-light);font-weight:600;">Lễ dâng hương báo cáo ông bà tổ tiên — nhà gái</span><div class="tl-task-sub">→ Lễ vật: hương, hoa, trầu cau, rượu, trái cây, thuốc, vàng mã, xôi gà</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text" style="color:var(--gold-light);font-weight:600;">Lễ dâng hương báo cáo ông bà tổ tiên — nhà trai</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Xác nhận số lượng khách cuối cùng, chốt số bàn với sảnh</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Gửi thiệp cưới đợt 1: họ hàng, sếp, đối tác</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Thử váy cưới lần cuối (điều chỉnh size)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Thử vest chú rể lần cuối</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị mâm quả lễ ăn hỏi (5-7 mâm)</span><div class="tl-task-sub">→ Trầu cau, xôi đỏ, bánh phu thê, bánh cốm, trái cây, rượu, thuốc lá, mật ong, trà</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị tráp lễ ăn hỏi (theo yêu cầu nhà gái)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đặt xe hoa (chốt loại xe, số xe, giờ đón)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Makeup thử (1-2 lần, thử cùng váy cưới)</span></label>
+            </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 4</span>
+                <span class="tl-phase-name">Tổng duyệt</span>
+                <span class="tl-phase-time">D-14 → D-7</span>
+            </div>
+            <div class="tl-tasks">
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Gửi thiệp cưới đợt 2: bạn bè, đồng nghiệp</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Họp bàn với tất cả nhà cung cấp (MC, trang trí, ảnh, phim)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Xác nhận timeline ngày cưới chi tiết với MC</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Xác nhận menu bữa tiệc với sảnh, nếm thử món (nếu có)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Lên danh sách phân bàn (bàn gia đình, bạn bè, đồng nghiệp...)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Mua sắm phụ kiện: giày, túi xách, trang sức đi kèm</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị bài phát biểu (nếu có), lời cảm ơn</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Xác nhận lại với đoàn rể các vai trò, vị trí</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị phòng ốc cho khách tỉnh/lệ (nếu có)</span></label>
+            </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 5</span>
+                <span class="tl-phase-name">Lễ ăn hỏi & Chuẩn bị cuối</span>
+                <span class="tl-phase-time">D-7 → D-1</span>
+            </div>
+            <div class="tl-tasks">
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text" style="color:var(--gold-light);font-weight:600;">Tổ chức Lễ ăn hỏi (đoàn rể đến nhà gái dâng lễ)</span><div class="tl-task-sub">→ Thường làm trước 1-3 ngày hoặc sáng cùng ngày cưới. Tùy thỏa thuận 2 bên</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Nhận váy cưới, vest từ tiệm (kiểm tra kỹ)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Đặt/nhận hoa cưới (bouquet), hoa cài áo</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Nhận nhẫn cưới, kiểm tra khắc tên (nếu có)</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Kiểm tra lại toàn bộ lễ vật, mâm quả, tráp lễ</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị phòng nghỉ cô dâu tại sảnh tiệc</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Phân công người phụ trách từng công việc ngày cưới</span><div class="tl-task-sub">→ Người nhận quà, người dẫn khách, người giữ nhẫn, người theo dõi timeline...</div></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chăm sóc da, mặt nạ, uống nhiều nước, ngủ sớm</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị đồ đi thay: áo dài, váy đổi, giày dự phòng</span></label>
+                <label class="tl-task"><input type="checkbox"><span class="tl-task-text">Chuẩn bị phong bì lì xì cho đoàn rể, xe hoa, người giúp việc</span></label>
+            </div>
+        </div>
+
+        <!-- Phase 6: D-Day -->
+        <div class="tl-phase reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-phase-header">
+                <span class="tl-phase-tag">Phase 6</span>
+                <span class="tl-phase-name">Ngày Cưới (D-Day)</span>
+                <span class="tl-phase-time">Ngày trọng đại</span>
+            </div>
+            <div class="tl-day-schedule">
+                <div class="tl-day-item"><span class="tl-day-time">05:00</span><span class="tl-day-desc">Cô dâu dậy, vệ sinh cá nhân, ăn sáng nhẹ (cháo, sữa, trái cây)</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">05:30</span><span class="tl-day-desc">Makeup + làm tóc lần 1 (style lễ hỏi / đi đón dâu)</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">06:30</span><span class="tl-day-desc">Kiểm tra最后一次 lễ vật, mâm quả, trang phục tại nhà gái</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">07:00</span><span class="tl-day-desc">Đoàn rể xuất phát từ nhà trai (xe hoa + xe đi theo)</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">07:30</span><span class="tl-day-desc">Đoàn rể đến nhà gái — mở cửa, mang lễ vật vào</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">08:00</span><span class="tl-day-desc">Lễ ăn hỏi: đại diện hai bên phát biểu, rót rượu, trao quà</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">08:30</span><span class="tl-day-desc">Đoàn rễ đón cô dâu lên xe hoa, xuất phát về nhà trai</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">09:00</span><span class="tl-day-desc">Về đến nhà trai — Lễ gia tiên: dâng hương, trình diện ông bà</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">09:30</span><span class="tl-day-desc">Cô dâu thay đồ, makeup lần 2 (style tiệc)</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">10:30</span><span class="tl-day-desc">Đến sảnh tiệc — chụp ảnh tại sảnh, kiểm tra trang trí</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">11:00</span><span class="tl-day-desc">Khách bắt đầu đến — người dẫn khách đưa đến bàn</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">11:30</span><span class="tl-day-desc" style="color:var(--gold-light);font-weight:500;">BẮT ĐẦU TIỆC CƯỚI — MC khai mạc, giới thiệu đôi tân hôn</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">11:45</span><span class="tl-day-desc">Nghi thức: cắt bánh, rót rượu, thắp nến (nếu có)</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">12:00</span><span class="tl-day-desc">Đi mời bàn — bắt đầu từ bàn gia đình, rồi bàn khách</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">12:30</span><span class="tl-day-desc">Khách dùng bữa, chụp ảnh lưu niệm</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">13:30</span><span class="tl-day-desc">Tân hôn thay váy đổi, chụp ảnh追加 với khách</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">14:00</span><span class="tl-day-desc">MC tuyên bố kết thúc tiệc, tân hôn đứng cửa tiễn khách</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">14:30</span><span class="tl-day-desc">Về nhà nghỉ ngơi, trả lại trang phục thuê</span></div>
+                <div class="tl-day-item"><span class="tl-day-time">Tối</span><span class="tl-day-desc">Đón bạn bè thân riêng ăn tối (nếu có), hoặc nghỉ ngơi</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GUESTS -->
+<section class="section" id="guests">
+    <div class="section-label">Khách mời</div>
+    <h2 class="section-title">Danh sách khách theo nhóm</h2>
+    <p class="section-desc">Phân bổ khoảng 50 người/nhóm, tổng 450 khách tương đương ~45 bàn tiệc.</p>
+
+    <div class="table-wrap reveal">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:50px;">STT</th>
+                    <th>Nhóm khách mời</th>
+                    <th style="width:100px;text-align:center;">Số lượng</th>
+                    <th style="width:80px;text-align:center;">Bàn</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><i class="fa-solid fa-home tbl-icon"></i>Gia đình cô dâu</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bố mẹ, anh chị em ruột, họ hàng gần bên gái</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><i class="fa-solid fa-home tbl-icon"></i>Gia đình chú rể</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bố mẹ, anh chị em ruột, họ hàng gần bên trai</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><i class="fa-solid fa-graduation-cap tbl-icon"></i>Bạn bè cấp 3 cô dâu</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bạn cùng trường THPT, giữ liên lạc</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><i class="fa-solid fa-graduation-cap tbl-icon"></i>Bạn bè đại học cô dâu</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bạn cùng khóa, sinh hoạt cùng CLB/ lớp</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><i class="fa-solid fa-briefcase tbl-icon"></i>Đồng nghiệp cô dâu</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Cùng phòng ban, sếp, nhân sự liên quan</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><i class="fa-solid fa-graduation-cap tbl-icon"></i>Bạn bè cấp 3 chú rể</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bạn cùng trường THPT, anh em thân</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><i class="fa-solid fa-graduation-cap tbl-icon"></i>Bạn bè đại học chú rể</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Bạn cùng khóa, đội nhóm, sinh hoạt chung</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><i class="fa-solid fa-briefcase tbl-icon"></i>Đồng nghiệp chú rể</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Cùng công ty, sếp, đối tác làm ăn</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><i class="fa-solid fa-people-group tbl-icon"></i>Họ hàng hai bên gia đình</td>
+                    <td style="text-align:center;font-weight:600;">50</td>
+                    <td style="text-align:center;">5</td>
+                    <td>Họ xa, cô chú bác, hàng xóm thân thiết</td>
+                </tr>
+                <tr class="tbl-total">
+                    <td></td>
+                    <td><i class="fa-solid fa-calculator tbl-icon"></i>TỔNG CỘNG</td>
+                    <td style="text-align:center;">450</td>
+                    <td style="text-align:center;">45</td>
+                    <td>Dự kiến, có thể ±1-2 bàn tùy thực tế</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;" class="reveal">
+        <div style="flex:1;min-width:250px;padding:16px 20px;border-radius:10px;background:var(--card);border:1px solid var(--border);">
+            <div style="font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Phân bàn đề xuất</div>
+            <div style="font-size:14px;color:var(--text2);line-height:2;">
+                <b style="color:var(--gold);">Bàn 1-5:</b> Gia đình cô dâu<br>
+                <b style="color:var(--gold);">Bàn 6-10:</b> Gia đình chú rể<br>
+                <b style="color:var(--gold);">Bàn 11-15:</b> Họ hàng hai bên<br>
+                <b style="color:var(--gold);">Bàn 16-25:</b> Bạn bè cô dâu (cấp 3 + ĐH)<br>
+                <b style="color:var(--gold);">Bàn 26-35:</b> Bạn bè chú rể (cấp 3 + ĐH)<br>
+                <b style="color:var(--gold);">Bàn 36-45:</b> Đồng nghiệp 2 bên
+            </div>
+        </div>
+        <div style="flex:1;min-width:250px;padding:16px 20px;border-radius:10px;background:var(--card);border:1px solid var(--border);">
+            <div style="font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Lưu ý khi phân bàn</div>
+            <div style="font-size:14px;color:var(--text2);line-height:2;">
+                <i class="fa-solid fa-circle-info" style="color:var(--gold-dark);margin-right:4px;"></i> Bàn gia đình đặt gần sân khấu<br>
+                <i class="fa-solid fa-circle-info" style="color:var(--gold-dark);margin-right:4px;"></i> Bạn bè trẻ đặt khu vực xa loa<br>
+                <i class="fa-solid fa-circle-info" style="color:var(--gold-dark);margin-right:4px;"></i> Đồng nghiệp sếp bàn riêng trang trọng<br>
+                <i class="fa-solid fa-circle-info" style="color:var(--gold-dark);margin-right:4px;"></i> Dự phòng 2 bàn cho khách ngoài dự kiến<br>
+                <i class="fa-solid fa-circle-info" style="color:var(--gold-dark);margin-right:4px;"></i> Bàn có người ăn chay cần ghi chú trước
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BUDGET -->
+<section class="section" id="budget">
+    <div class="section-label">Ngân sách</div>
+    <h2 class="section-title">Phân bổ chi phí 500 triệu</h2>
+    <p class="section-desc">Chi tiết từng hạng mục. Nhấn vào từng nhóm để xem chi tiết con số. Thanh vàng thể hiện tỷ trọng tương đối.</p>
+
+    <div id="budgetList"></div>
+
+    <div class="budget-summary reveal">
+        <div class="budget-sum-card main">
+            <div class="budget-sum-label">Tổng ngân sách</div>
+            <div class="budget-sum-value">500.000.000đ</div>
+        </div>
+        <div class="budget-sum-card">
+            <div class="budget-sum-label">Chi phí cố định</div>
+            <div class="budget-sum-value" style="color:var(--text);">467.000.000đ</div>
+        </div>
+        <div class="budget-sum-card">
+            <div class="budget-sum-label">Quỹ dự phòng</div>
+            <div class="budget-sum-value" style="color:var(--green);">33.000.000đ</div>
+        </div>
+    </div>
+</section>
+
+<!-- VENUE -->
+<section class="section" id="venue">
+    <div class="section-label">Đề xuất địa điểm</div>
+    <h2 class="section-title">Sảnh tiệc cưới</h2>
+    <p class="section-desc">Gợi ý dựa trên tiêu chí: vị trí trung tâm, sức chứa phù hợp, giá vừa phải, dịch vụ đầy đủ.</p>
+
+    <div class="venue-card reveal">
+        <img class="venue-img" src="https://picsum.photos/seed/adora-wedding-hall/1100/400.jpg" alt="Sảnh tiệc The Adora 2">
+        <div class="venue-body">
+            <div class="venue-name">The Adora 2</div>
+            <div class="venue-loc"><i class="fa-solid fa-location-dot"></i> 431 Hoàng Văn Thụ, Phường 2, Quận Tân Bình, TP.HCM</div>
+            <div class="venue-tags">
+                <span class="venue-tag"><i class="fa-solid fa-check" style="color:var(--green);margin-right:4px;font-size:10px;"></i>Trung tâm TP.HCM</span>
+                <span class="venue-tag"><i class="fa-solid fa-check" style="color:var(--green);margin-right:4px;font-size:10px;"></i>Sức chứa 500+ khách</span>
+                <span class="venue-tag"><i class="fa-solid fa-check" style="color:var(--green);margin-right:4px;font-size:10px;"></i>Bãi đỗ xe rộng</span>
+                <span class="venue-tag"><i class="fa-solid fa-check" style="color:var(--green);margin-right:4px;font-size:10px;"></i>Phòng nghỉ cô dâu</span>
+                <span class="venue-tag"><i class="fa-solid fa-check" style="color:var(--green);margin-right:4px;font-size:10px;"></i>Âm thanh sẵn có</span>
+            </div>
+            <div class="venue-details">
+                <div class="venue-detail-item"><i class="fa-solid fa-utensils"></i>Giá bàn tiệc: ~2.800.000 - 3.500.000đ/bàn</div>
+                <div class="venue-detail-item"><i class="fa-solid fa-users"></i>Sức chứa sảnh lớn: 600 khách</div>
+                <div class="venue-detail-item"><i class="fa-solid fa-car"></i>Bãi đỗ xe: 150+ ô tô</div>
+                <div class="venue-detail-item"><i class="fa-solid fa-clock"></i>Giờ tiệc: 11:00 - 14:00 hoặc 18:00 - 21:00</div>
+                <div class="venue-detail-item"><i class="fa-solid fa-bed"></i>Phòng nghỉ cô dâu: Miễn phí</div>
+                <div class="venue-detail-item"><i class="fa-solid fa-phone"></i>Hotline: 028 7300 8866</div>
+            </div>
+            <div class="venue-note">
+                <strong style="color:var(--gold);">Tại sao chọn The Adora 2:</strong><br>
+                - Vị trí vàng quận Tân Bình, khách từ các quận khác dễ di chuyển<br>
+                - Sảnh lớn trang trí sang trọng, ánh sáng tự nhiên tốt<br>
+                - Menu đa dạng (Á-Âu), được nếm thử trước khi chốt<br>
+                - Đội ngũ phục vụ chuyên nghiệp, kinh nghiệm tổ chức 500+ đám cưới/năm<br>
+                - Có sẵn hệ thống âm thanh cơ bản (có thể thuê thêm ánh sáng nếu cần)<br>
+                - Phòng vest cô dâu miễn phí, có_mirror lớn, ánh sáng makeup tốt<br><br>
+                <strong style="color:var(--gold);">Phương án dự phòng:</strong> Gem Center (Q.1), White Palace (Q.Bình Thạnh), Riverside Palace (Q.7) — giá có thể cao hơn 20-40%.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOTES -->
+<section class="section" id="notes">
+    <div class="section-label">Lưu ý quan trọng</div>
+    <h2 class="section-title">Những điều cần nhớ</h2>
+    <p class="section-desc">Kinh nghiệm từ các cặp đôi đi trước, giúp tránh sai sót trong ngày trọng đại.</p>
+
+    <div class="notes-grid">
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-landmark-dome"></i> Lễ Hằng Thuận</div>
+            <ul class="note-list">
+                <li>Liên hệ chùa trước ít nhất 2-3 tuần để đặt ngày</li>
+                <li>Mặc trang phục lịch sự, kín đáo (áo dài là tốt nhất)</li>
+                <li>Chuẩn bị thêm tiền lì xì cho tiểu nitrogen/nhà chùa</li>
+                <li>Không mặc đồ quá sặc sỡ, tránh trang sức quá lớn</li>
+                <li>Cô dâu không mặc trắng, nên mặc màu pastel, hồng nhạt, be</li>
+                <li>Nên đến sớm 15-20 phút để chuẩn bị tâm lý</li>
+            </ul>
+        </div>
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-gift"></i> Lễ ăn hỏi</div>
+            <ul class="note-list">
+                <li>Số mâm quả theo yêu cầu nhà gái (thường lẻ: 5, 7, 9 mâm)</li>
+                <li>Trầu cau phải là trầu nguyên lá, không bị héo</li>
+                <li>Tráp lễ cần có người đàn ông mang (đoàn rể)</li>
+                <li>Chuẩn bị câu đối đỏ, giấy hồng phấn dán xe</li>
+                <li>Người đại diện nói lễ cần chuẩn bị trước lời nói</li>
+                <li>Nhẫn đính hôn đưa trong tráp riêng, có nắp đậy</li>
+            </ul>
+        </div>
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-camera"></i> Ảnh & Media</div>
+            <ul class="note-list">
+                <li>Pre-wedding nên chụp trước 2-3 tháng để kịp in album</li>
+                <li>Quay phim cần 2 camera + flycam mới đủ góc đẹp</li>
+                <li>Hợp đồng ghi rõ: số ảnh chụp, thời gian giao phim</li>
+                <li>Phim highlight giao sau 7-14 ngày, full ceremony 30-45 ngày</li>
+                <li>Chụp ảnh gia đình riêng lúc lễ gia tiên</li>
+                <li>Chuẩn bị USB riêng nhận ảnh gốc từ ekip</li>
+            </ul>
+        </div>
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-ring"></i> Nhẫn</div>
+            <ul class="note-list">
+                <li>Đeo thử ít nhất 2 lần trước khi mua chính thức</li>
+                <li>Nhẫn cưới nên chọn platium hoặc vàng 14K (đỡ xỉn)</li>
+                <li>Khai khắc tên bên trong (nếu shop hỗ trợ)</li>
+                <li>Giữ hóa đơn, bảo hành (thường 1 năm)</li>
+                <li>Nhẫn đính hôn chọn riêng biệt, nhẫn cưới là đôi đồng bộ</li>
+                <li>Ngày cưới giao cho người giữ nhẫn cẩn thận</li>
+            </ul>
+        </div>
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-shirt"></i> Trang phục</div>
+            <ul class="note-list">
+                <li>Thuê váy 3 bộ: váy lễ + váy tiệc + váy đổi cuối</li>
+                <li>Thử váy đúng giờ cưới (buổi sáng vs buổi chiều ánh sáng khác)</li>
+                <li>Vest chú rể nên may riêng nếu budget cho phép</li>
+                <li>Chuẩn bị giày thoải mái (đi đứng nhiều ngày cưới)</li>
+                <li>Mang theo kim chỉ, băng dính, ghim băng phụ kiện dự phòng</li>
+                <li>Áo dài lễ hỏi nên chọn màu đỏ, hồng đào, hoặc tím</li>
+            </ul>
+        </div>
+        <div class="note-card reveal">
+            <div class="note-card-title"><i class="fa-solid fa-triangle-exclamation"></i> Tránh sai lầm</div>
+            <ul class="note-list">
+                <li>Không chốt số bàn quá sớm (khách hủy cuối cùng rất phổ biến)</li>
+                <li>Không thuê MC qua điện thoại chưa từng xem trình diễn</li>
+                <li>Không quên bôi kem chống nắng ngày cưới (chụp ngoài trời)</li>
+                <li>Không ăn uống quá no trước makeup (sợ hỏng lớp nền)</li>
+                <li>Không để nhẫn ở nhà — giao cho người đáng tin nhất</li>
+                <li>Có dự phòng thời tiết nếu tổ chức ngoài trời</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>Thiết kế bởi <span class="gold">Wedding Plan</span> — Chúc hai bạn một đám cưới <span class="gold">trọn vẹn</span></p>
+    <p style="margin-top:8px;font-size:12px;">Ngân sách: 500.000.000đ | Khách: ~450 người | Sảnh: The Adora 2</p>
+</footer>
+
+<script>
+// === DỮ LIỆU NGÂN SÁCH ===
+const budgetData = [
+    {
+        letter:'A', name:'Lễ Hằng Thuận tại chùa', total:8000000, pct:'1.6%',
+        subs:[
+            {name:'Đồ cúng (hoa tươi, trái cây, nhang, đèn, nến)', amount:2000000},
+            {name:'Lễ vật (nhang, trầu cau, rượu, nước)', amount:1000000},
+            {name:'Hậu tạ sư thầy, nhà chùa', amount:2500000},
+            {name:'Áo dài đi chùa (thuê/may)', amount:1500000},
+            {name:'Di chuyển, ăn uống ngày lễ', amount:1000000}
+        ]
+    },
+    {
+        letter:'B', name:'Lễ trước kết hôn (dâng hương họ + ăn hỏi)', total:40000000, pct:'8.0%',
+        subs:[
+            {name:'Lễ dâng hương họ cô dâu (lễ vật, vàng mã, trầu cau)', amount:8000000},
+            {name:'Lễ dâng hương họ chú rể', amount:8000000},
+            {name:'Mâm quả lễ ăn hỏi (5-7 mâm: trầu, xôi, bánh, quả...)', amount:10000000},
+            {name:'Tráp lễ ăn hỏi (rượu, thuốc, mật ong, trà, bánh cốm...)', amount:8000000},
+            {name:'Hoa tươi trang trí mâm, tráp', amount:3000000},
+            {name:'Trầu cau (100-200 miếng)', amount:3000000}
+        ]
+    },
+    {
+        letter:'C', name:'Đoàn rể & di chuyển', total:12000000, pct:'2.4%',
+        subs:[
+            {name:'Thuê xe hoa chính (1 chiếc)', amount:3000000},
+            {name:'Thuê xe đi theo đoàn rể (2-3 chiếc)', amount:4000000},
+            {name:'Trang trí xe hoa (hoa tươi, ruy băng)', amount:3000000},
+            {name:'Xăng, phí gửi xe, phí đường', amount:2000000}
+        ]
+    },
+    {
+        letter:'D', name:'Sảnh tiệc & ăn uống', total:150000000, pct:'30.0%',
+        subs:[
+            {name:'Thuê sảnh The Adora 2 (45 bàn × 3.000.000đ)', amount:135000000},
+            {name:'Phụ thu phục vụ, dịch vụ thêm', amount:5000000},
+            {name:'Nước uống đặc biệt, bánh kèm bàn', amount:5000000},
+            {name:'Thuê phòng nghỉ cô dâu tại sảnh', amount:5000000}
+        ]
+    },
+    {
+        letter:'E', name:'Trang trí sảnh tiệc', total:38000000, pct:'7.6%',
+        subs:[
+            {name:'Backdrop sân khấu chính', amount:15000000},
+            {name:'Centerpiece bàn khách (45 bàn)', amount:13000000},
+            {name:'Cổng hoa lối đi, đường red carpet', amount:6000000},
+            {name:'Bảng tên khách, standee photo, khánh động', amount:4000000}
+        ]
+    },
+    {
+        letter:'F', name:'Trang phục', total:27000000, pct:'5.4%',
+        subs:[
+            {name:'Váy cưới chính (thuê)', amount:10000000},
+            {name:'Váy cưới đổi 2 bộ (thuê)', amount:8000000},
+            {name:'Vest chú rể + giày (thuê)', amount:6000000},
+            {name:'Áo dài cô dâu lễ hỏi (thuê/may)', amount:3000000}
+        ]
+    },
+    {
+        letter:'G', name:'Ảnh & Media', total:45000000, pct:'9.0%',
+        subs:[
+            {name:'Chụp ảnh pre-wedding (studio + ngoại cảnh 1 ngày)', amount:15000000},
+            {name:'Chụp ảnh ngày cưới (1 photographer toàn bộ)', amount:7000000},
+            {name:'Quay phim ngày cưới (2 camera + flycam)', amount:15000000},
+            {name:'Dựng phim highlight (3-5 phút) + full ceremony', amount:8000000}
+        ]
+    },
+    {
+        letter:'H', name:'Nhẫn', total:50000000, pct:'10.0%',
+        subs:[
+            {name:'Nhẫn đính hôn (vàng 18K + đá trang trí)', amount:20000000},
+            {name:'Nhẫn cưới đôi (Platium / vàng 14K)', amount:30000000}
+        ]
+    },
+    {
+        letter:'I', name:'Thiệp cưới', total:22000000, pct:'4.4%',
+        subs:[
+            {name:'Thiệp mời chính (500 chiếc × 35.000đ)', amount:17500000},
+            {name:'Thiệp cảm ơn (200 chiếc × 15.000đ)', amount:3000000},
+            {name:'Phong bì, tem dán, bưu phí gửi thiệp', amount:1500000}
+        ]
+    },
+    {
+        letter:'J', name:'MC & Âm nhạc', total:18000000, pct:'3.6%',
+        subs:[
+            {name:'MC dẫn chương trình (toàn bộ tiệc)', amount:8000000},
+            {name:'Hệ thống âm thanh bổ sung', amount:5000000},
+            {name:'Ánh sáng sân khấu', amount:3000000},
+            {name:'Nhạc sống hoặc DJ', amount:2000000}
+        ]
+    },
+    {
+        letter:'K', name:'Makeup & Tóc', total:10000000, pct:'2.0%',
+        subs:[
+            {name:'Makeup + tóc ngày cưới (2 lần: lễ + tiệc)', amount:8000000},
+            {name:'Makeup thử (1-2 buổi)', amount:2000000}
+        ]
+    },
+    {
+        letter:'L', name:'Hoa cưới', total:6000000, pct:'1.2%',
+        subs:[
+            {name:'Bouquet hoa cưới (hoa tay cô dâu)', amount:2500000},
+            {name:'Hoa cài áo chú rể', amount:500000},
+            {name:'Hoa cài áo phụ huynh (4 người)', amount:1000000},
+            {name:'Hoa trang trí bàn gia đình', amount:2000000}
+        ]
+    },
+    {
+        letter:'M', name:'Chi phí khác', total:41000000, pct:'8.2%',
+        subs:[
+            {name:'Ăn uống đoàn rể sáng ngày cưới', amount:3000000},
+            {name:'Ăn uống ngày chụp pre-wedding', amount:2000000},
+            {name:'Tip (nhà hàng, xe, makeup, photographer, nhân viên)', amount:10000000},
+            {name:'Chi phí đi lại phát sinh', amount:6000000},
+            {name:'Quà tặng khách VIP, phụ huynh, người hỗ trợ', amount:10000000},
+            {name:'Chi phí linh tinh khác', amount:10000000}
+        ]
+    },
+    {
+        letter:'N', name:'Quỹ dự phòng', total:33000000, pct:'6.6%',
+        subs:[
+            {name:'Dự phòng chi phí phát sinh (khách tăng, giá tăng...)', amount:20000000},
+            {name:'Dự phòng sửa chữa, thay thế trang phục', amount:8000000},
+            {name:'Dự phòng thời tiết (nếu ngoài trời)', amount:5000000}
+        ]
+    }
+];
+
+// Format tiền
+function fmt(n) {
+    return n.toLocaleString('vi-VN') + 'đ';
+}
+
+// Render budget list
+function renderBudget() {
+    const container = document.getElementById('budgetList');
+    container.innerHTML = budgetData.map((cat, i) => `
+        <div class="budget-category reveal" data-idx="${i}">
+            <div class="budget-cat-header" onclick="toggleBudget(${i})">
+                <div class="budget-cat-letter">${cat.letter}</div>
+                <div class="budget-cat-info">
+                    <div class="budget-cat-name">${cat.name}</div>
+                    <div class="budget-cat-count">${cat.subs.length} mục chi tiết</div>
+                </div>
+                <div class="budget-cat-amount">${fmt(cat.total)}</div>
+                <div class="budget-cat-pct">${cat.pct}</div>
+                <div class="budget-cat-toggle" id="toggle-${i}"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="budget-bar-wrap">
+                <div class="budget-bar-bg">
+                    <div class="budget-bar-fill" data-width="${cat.pct}"></div>
+                </div>
+            </div>
+            <div class="budget-sub" id="sub-${i}">
+                <div class="budget-sub-inner">
+                    ${cat.subs.map(s => `
+                        <div class="budget-sub-item">
+                            <span class="budget-sub-name">${s.name}</span>
+                            <span class="budget-sub-amount">${fmt(s.amount)}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Toggle budget sub-items
+function toggleBudget(idx) {
+    const sub = document.getElementById('sub-' + idx);
+    const toggle = document.getElementById('toggle-' + idx);
+    sub.classList.toggle('open');
+    toggle.classList.toggle('open');
+}
+
+// === PARTICLES ===
+function createParticles() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 25; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (8 + Math.random() * 12) + 's';
+        p.style.animationDelay = Math.random() * 10 + 's';
+        p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
+        container.appendChild(p);
+    }
+}
+
+// === SCROLL REVEAL ===
+function setupReveal() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Animate budget bars inside
+                const bars = entry.target.querySelectorAll('.budget-bar-fill');
+                bars.forEach(bar => {
+                    const w = bar.dataset.width;
+                    setTimeout(() => { bar.style.width = w; }, 200);
+                });
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// === COUNTER ANIMATION ===
+function animateCounters() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.dataset.target);
+                let current = 0;
+                const step = Math.ceil(target / 60);
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) { current = target; clearInterval(timer); }
+                    el.textContent = current;
+                }, 25);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(el => observer.observe(el));
+}
+
+// === NAV SCROLL ===
+function setupNav() {
+    const nav = document.getElementById('navbar');
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = ['overview','timeline','guests','budget','venue','notes'];
+
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+
+        // Highlight active nav
+        let current = '';
+        sections.forEach(id => {
+            const sec = document.getElementById(id);
+            if (sec && sec.offsetTop - 120 <= window.scrollY) {
+                current = id;
+            }
+        });
+        links.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+    });
+}
+
+// === CHECKBOX PROGRESS ===
+function setupCheckboxes() {
+    const checkboxes = document.querySelectorAll('.tl-task input[type="checkbox"]');
+    const total = checkboxes.length;
+
+    // Load saved state
+    const saved = JSON.parse(localStorage.getItem('wedding-checklist') || '{}');
+    checkboxes.forEach((cb, i) => {
+        if (saved[i]) {
+            cb.checked = true;
+            cb.closest('.tl-task').classList.add('checked');
+        }
+    });
+
+    function updateProgress() {
+        const checked = document.querySelectorAll('.tl-task input:checked').length;
+        const pct = Math.round((checked / total) * 100);
+        document.getElementById('progressBar').style.width = pct + '%';
+        document.getElementById('progressText').textContent = pct + '%';
+        document.getElementById('taskCount').innerHTML =
+            checked + '<span class="unit"> / ' + total + '</span>';
+
+        // Save state
+        const state = {};
+        checkboxes.forEach((cb, i) => { state[i] = cb.checked; });
+        localStorage.setItem('wedding-checklist', JSON.stringify(state));
+    }
+
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', function() {
+            this.closest('.tl-task').classList.toggle('checked', this.checked);
+            updateProgress();
+        });
+    });
+
+    updateProgress();
+}
+
+// === INIT ===
+document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+    renderBudget();
+    setupReveal();
+    animateCounters();
+    setupNav();
+    setupCheckboxes();
+});
+</script>
+</body>
+</html>
