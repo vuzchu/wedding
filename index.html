@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph / Facebook -->
-<!-- Primary Meta -->
 <meta name="title" content="Quang Vũ & Hải Hà — 27.05.2026">
 <meta name="description" content="Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi ngày 27 tháng 5 năm 2026 tại Promes Center.">
 
-<!-- Open Graph / Facebook / Zalo -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vhchungdoi.com.vn/">
 <meta property="og:title" content="Quang Vũ & Hải Hà — 27.05.2026">
@@ -19,8 +16,6 @@
 <meta property="og:image:height" content="1920">
 <meta property="og:image:type" content="image/jpeg">
 
-<!-- Twitter -->
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quang Vũ & Hải Hà — 27.05.2026">
 <meta name="twitter:description" content="Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi ngày 27 tháng 5 năm 2026 tại Promes Center.">
@@ -32,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <script>
@@ -54,690 +49,179 @@
         }
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Libre Baskerville', serif; background: #faf8f5; color: #2c2c2c; font-weight: 400; }
 
-        body {
-            font-family: 'Libre Baskerville', serif;
-            background: #faf8f5;
-            color: #2c2c2c;
-            font-weight: 400;
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        @keyframes bounceZoom {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.25);
-            }
-        }
-
-        @keyframes heartBeat {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            15% {
-                transform: scale(1.2);
-            }
-
-            30% {
-                transform: scale(1);
-            }
-
-            45% {
-                transform: scale(1.15);
-            }
-        }
-
-        @keyframes petalFall {
-            0% {
-                transform: translateY(-10vh) rotate(0deg) translateX(0);
-                opacity: 0;
-            }
-
-            8% {
-                opacity: 0.5;
-            }
-
-            85% {
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: translateY(105vh) rotate(540deg) translateX(80px);
-                opacity: 0;
-            }
-        }
-
-        @keyframes spin-slow {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes pulse-ring {
-            0% {
-                transform: scale(1);
-                opacity: 0.6;
-            }
-
-            100% {
-                transform: scale(1.6);
-                opacity: 0;
-            }
-        }
-
-        .anim-fade-up {
-            animation: fadeUp 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        .anim-fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-            opacity: 0;
-        }
-
-        .anim-float {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .anim-bounce-zoom {
-            animation: bounceZoom 1.6s ease-in-out infinite;
-            transform-origin: center;
-        }
-
-        .anim-heartbeat {
-            animation: heartBeat 2.5s ease-in-out infinite;
-        }
-
-        .d1 {
-            animation-delay: .15s
-        }
-
-        .d2 {
-            animation-delay: .3s
-        }
-
-        .d3 {
-            animation-delay: .45s
-        }
-
-        .d4 {
-            animation-delay: .6s
-        }
-
-        .d5 {
-            animation-delay: .75s
-        }
-
-        .d6 {
-            animation-delay: .9s
-        }
-
-        .d7 {
-            animation-delay: 1.05s
-        }
-
-        .d8 {
-            animation-delay: 1.2s
-        }
-
-        .d9 {
-            animation-delay: 1.5s
-        }
-
-        .d10 {
-            animation-delay: 2s
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(45px);
-            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .art-gallery-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .art-gallery-item img {
-            transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.7s ease;
-            filter: brightness(0.95) saturate(0.92) contrast(1.02);
-        }
-
-        .art-gallery-item:hover img {
-            transform: scale(1.06);
-            filter: brightness(1.05) saturate(1.15) contrast(1.04);
-        }
-
-        .art-gallery-item .art-num {
+        /* ============================================
+           HỌA TIẾT HOA TRANG TRÍ GÓC
+        ============================================ */
+        .floral-corner {
             position: absolute;
-            bottom: 12px;
-            left: 14px;
-            z-index: 5;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            line-height: 1;
-            color: rgba(255, 255, 255, 0.08);
-            transition: color 0.5s ease;
             pointer-events: none;
+            z-index: 1;
+            user-select: none;
         }
-
-        .art-gallery-item:hover .art-num {
-            color: rgba(255, 255, 255, 0.18);
+        /* Hoa góc trên-phải */
+        .floral-tr {
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: auto;
+            transform: translate(15%, -10%);
+            opacity: 0.95;
         }
-
-        .art-gallery-item .art-line {
-            position: absolute;
+        /* Hoa góc dưới-trái */
+        .floral-bl {
             bottom: 0;
             left: 0;
+            width: 320px;
+            height: auto;
+            transform: translate(-12%, 12%) scaleX(-1);
+            opacity: 0.95;
+        }
+        /* Hoa góc trên-trái */
+        .floral-tl {
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: auto;
+            transform: translate(-15%, -10%) scaleX(-1);
+            opacity: 0.85;
+        }
+        /* Hoa góc dưới-phải */
+        .floral-br {
+            bottom: 0;
             right: 0;
-            height: 2px;
-            background: #c9a96e;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: 5;
+            width: 240px;
+            height: auto;
+            transform: translate(12%, 12%);
+            opacity: 0.85;
+        }
+        /* Trên mobile thu nhỏ lại */
+        @media (max-width: 768px) {
+            .floral-tr { width: 160px; }
+            .floral-bl { width: 180px; }
+            .floral-tl { width: 130px; }
+            .floral-br { width: 140px; }
         }
 
-        .art-gallery-item:hover .art-line {
-            transform: scaleX(1);
-        }
-
-        .mobile-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-        }
-
-        .mobile-grid .art-gallery-item .art-num {
-            font-size: 1.6rem;
-            bottom: 8px;
-            left: 10px;
-        }
-
-        .mobile-grid .art-gallery-item img {
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            object-position: center 25%;
-        }
-
-        .desktop-grid {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .mobile-grid {
-                display: none;
-            }
-
-            .desktop-grid {
-                display: grid;
-            }
-        }
-
-        .gallery-hero-img {
-            transition: filter 0.1s linear;
-        }
-
-        .scroll-img-wrap {
-            position: relative;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        .scroll-img-wrap img {
-            transition: transform 0.7s ease, filter 0.5s ease;
-            filter: brightness(0.92) saturate(0.88) contrast(1.03);
-        }
-
-        .scroll-img-wrap:hover img {
-            transform: scale(1.04);
-            filter: brightness(1.05) saturate(1.15) contrast(1.04);
-        }
-
-        .scroll-img-wrap .scroll-num {
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.04);
-            transition: color 0.5s ease;
-            pointer-events: none;
-        }
-
-        .scroll-img-wrap:hover .scroll-num {
-            color: rgba(255, 255, 255, 0.1);
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .lightbox-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 200;
-            background: rgba(0, 0, 0, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-        }
-
-        .lightbox-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .lightbox-overlay img {
-            max-width: 92vw;
-            max-height: 88vh;
-            object-fit: contain;
-            border-radius: 2px;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-backdrop {
-            position: fixed;
-            inset: 0;
-            z-index: 150;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(8px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            padding: 1rem;
-        }
-
-        .modal-backdrop.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .modal-card {
-            background: #faf8f5;
-            border-radius: 1.5rem;
-            max-width: 480px;
-            width: 100%;
-            padding: 2.5rem;
-            transform: scale(0.92) translateY(20px);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal-backdrop.active .modal-card {
-            transform: scale(1) translateY(0);
-        }
-
-        .petal {
-            position: fixed;
-            pointer-events: none;
-            z-index: 5;
-            border-radius: 50% 0 50% 50%;
-            opacity: 0;
-            animation: petalFall linear forwards;
-            will-change: transform, opacity;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-
-        .noise {
-            position: fixed;
-            inset: 0;
-            z-index: 50;
-            pointer-events: none;
-            opacity: 0.025;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-            transform: translateZ(0);
-            will-change: transform;
-        }
-
-        .toast-msg {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: #2c2c2c;
-            color: white;
-            padding: 0.9rem 2rem;
-            border-radius: 9999px;
-            z-index: 300;
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            font-family: 'Libre Baskerville', serif;
-        }
-
-        .toast-msg.show {
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .deco-line {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.3), transparent);
-        }
-
-        .deco-line-dark {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #c9a96e, #e2d1a8);
-            color: #2c2c2c;
-            transition: all 0.3s ease;
+        /* Nền cream nhạt cho các section có hoa */
+        .floral-section {
+            background:
+                radial-gradient(ellipse at 80% 10%, rgba(232, 220, 195, 0.35), transparent 50%),
+                radial-gradient(ellipse at 15% 90%, rgba(230, 215, 188, 0.3), transparent 50%),
+                linear-gradient(180deg, #fbf6ec 0%, #f5ecdc 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .btn-gold::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #d4b87a, #eddcb8);
-            transform: translateX(-100%);
-            transition: transform 0.4s ease;
-        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        @keyframes bounceZoom { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+        @keyframes heartBeat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.2); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } }
+        @keyframes petalFall { 0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; } 8% { opacity: 0.5; } 85% { opacity: 0.5; } 100% { transform: translateY(105vh) rotate(540deg) translateX(80px); opacity: 0; } }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.6); opacity: 0; } }
+        @keyframes floralSway { 0%, 100% { transform: translate(15%, -10%) rotate(0deg); } 50% { transform: translate(15%, -10%) rotate(2deg); } }
 
-        .btn-gold:hover::after {
-            transform: translateX(0);
-        }
+        .anim-fade-up { animation: fadeUp 1s ease-out forwards; opacity: 0; }
+        .anim-fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
+        .anim-float { animation: float 4s ease-in-out infinite; }
+        .anim-bounce-zoom { animation: bounceZoom 1.6s ease-in-out infinite; transform-origin: center; }
+        .anim-heartbeat { animation: heartBeat 2.5s ease-in-out infinite; }
 
-        .btn-gold span {
-            position: relative;
-            z-index: 1;
-        }
+        .d1{animation-delay:.15s} .d2{animation-delay:.3s} .d3{animation-delay:.45s} .d4{animation-delay:.6s}
+        .d5{animation-delay:.75s} .d6{animation-delay:.9s} .d7{animation-delay:1.05s} .d8{animation-delay:1.2s}
+        .d9{animation-delay:1.5s} .d10{animation-delay:2s}
 
-        .btn-dark {
-            background: #2c2c2c;
-            color: white;
-            transition: all 0.3s ease;
-        }
+        .reveal { opacity: 0; transform: translateY(45px); transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        .btn-dark:hover {
-            background: #444;
-        }
+        .art-gallery-item { position: relative; overflow: hidden; cursor: pointer; }
+        .art-gallery-item img { transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.7s ease; filter: brightness(0.95) saturate(0.92) contrast(1.02); }
+        .art-gallery-item:hover img { transform: scale(1.06); filter: brightness(1.05) saturate(1.15) contrast(1.04); }
+        .art-gallery-item .art-num { position: absolute; bottom: 12px; left: 14px; z-index: 5; font-family: 'Cinzel', serif; font-weight: 700; font-size: 2.8rem; line-height: 1; color: rgba(255, 255, 255, 0.08); transition: color 0.5s ease; pointer-events: none; }
+        .art-gallery-item:hover .art-num { color: rgba(255, 255, 255, 0.18); }
+        .art-gallery-item .art-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: #c9a96e; transform: scaleX(0); transform-origin: left; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 5; }
+        .art-gallery-item:hover .art-line { transform: scaleX(1); }
 
-        .form-input {
-            width: 100%;
-            background: transparent;
-            border: 1px solid rgba(44, 44, 44, 0.12);
-            border-radius: 0.75rem;
-            padding: 0.85rem 1rem;
-            font-family: 'Libre Baskerville', serif;
-            font-size: 0.875rem;
-            color: #2c2c2c;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            outline: none;
-        }
+        .mobile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+        .mobile-grid .art-gallery-item .art-num { font-size: 1.6rem; bottom: 8px; left: 10px; }
+        .mobile-grid .art-gallery-item img { aspect-ratio: 1/1; object-fit: cover; object-position: center 25%; }
+        .desktop-grid { display: none; }
+        @media (min-width: 768px) { .mobile-grid { display: none; } .desktop-grid { display: grid; } }
 
-        .form-input::placeholder {
-            color: #b8b8b8;
-        }
+        .gallery-hero-img { transition: filter 0.1s linear; }
+        .scroll-img-wrap { position: relative; cursor: pointer; flex-shrink: 0; }
+        .scroll-img-wrap img { transition: transform 0.7s ease, filter 0.5s ease; filter: brightness(0.92) saturate(0.88) contrast(1.03); }
+        .scroll-img-wrap:hover img { transform: scale(1.04); filter: brightness(1.05) saturate(1.15) contrast(1.04); }
+        .scroll-img-wrap .scroll-num { font-family: 'Cinzel', serif; font-weight: 700; color: rgba(255, 255, 255, 0.04); transition: color 0.5s ease; pointer-events: none; }
+        .scroll-img-wrap:hover .scroll-num { color: rgba(255, 255, 255, 0.1); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .form-input:focus {
-            border-color: #c9a96e;
-            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
-        }
+        .lightbox-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0, 0, 0, 0.95); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+        .lightbox-overlay.active { opacity: 1; pointer-events: all; }
+        .lightbox-overlay img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 2px; transition: opacity 0.3s ease; }
 
-        .mobile-menu {
-            position: fixed;
-            inset: 0;
-            z-index: 100;
-            background: #faf8f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-        }
+        .modal-backdrop { position: fixed; inset: 0; z-index: 150; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 1rem; }
+        .modal-backdrop.active { opacity: 1; pointer-events: all; }
+        .modal-card { background: #faf8f5; border-radius: 1.5rem; max-width: 480px; width: 100%; padding: 2.5rem; transform: scale(0.92) translateY(20px); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); max-height: 90vh; overflow-y: auto; }
+        .modal-backdrop.active .modal-card { transform: scale(1) translateY(0); }
 
-        .mobile-menu.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .petal { position: fixed; pointer-events: none; z-index: 5; border-radius: 50% 0 50% 50%; opacity: 0; animation: petalFall linear forwards; will-change: transform, opacity; transform: translateZ(0); backface-visibility: hidden; }
 
-        .cal-day {
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 13px;
-            transition: all 0.3s ease;
-        }
+        .noise { position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); transform: translateZ(0); will-change: transform; }
 
-        .cal-day-highlight {
-            background: linear-gradient(135deg, #c9a96e, #e2d1a8);
-            color: #2c2c2c;
-            font-weight: 700;
-            font-family: 'Cinzel', serif;
-            font-size: 15px;
-            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2), 0 4px 15px rgba(201, 169, 110, 0.3);
-        }
+        .toast-msg { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(100px); background: #2c2c2c; color: white; padding: 0.9rem 2rem; border-radius: 9999px; z-index: 300; font-size: 0.8rem; letter-spacing: 0.05em; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); font-family: 'Libre Baskerville', serif; }
+        .toast-msg.show { transform: translateX(-50%) translateY(0); }
 
-        /* NÚT MỞ THIỆP */
-        .open-btn-wrap {
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
+        .deco-line { height: 1px; background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.3), transparent); }
+        .deco-line-dark { height: 1px; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent); }
 
-        .open-btn-circle {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #c9a96e, #e2d1a8);
-            box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+        .btn-gold { background: linear-gradient(135deg, #c9a96e, #e2d1a8); color: #2c2c2c; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .btn-gold::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #d4b87a, #eddcb8); transform: translateX(-100%); transition: transform 0.4s ease; }
+        .btn-gold:hover::after { transform: translateX(0); }
+        .btn-gold span { position: relative; z-index: 1; }
+        .btn-dark { background: #2c2c2c; color: white; transition: all 0.3s ease; }
+        .btn-dark:hover { background: #444; }
 
-        @media (min-width: 768px) {
-            .open-btn-circle {
-                width: 64px;
-                height: 64px;
-            }
-        }
+        .form-input { width: 100%; background: transparent; border: 1px solid rgba(44, 44, 44, 0.12); border-radius: 0.75rem; padding: 0.85rem 1rem; font-family: 'Libre Baskerville', serif; font-size: 0.875rem; color: #2c2c2c; transition: border-color 0.3s ease, box-shadow 0.3s ease; outline: none; }
+        .form-input::placeholder { color: #b8b8b8; }
+        .form-input:focus { border-color: #c9a96e; box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1); }
 
-        .open-btn-wrap:hover .open-btn-circle {
-            transform: scale(1.08);
-            box-shadow: 0 8px 28px rgba(201, 169, 110, 0.5);
-        }
+        .mobile-menu { position: fixed; inset: 0; z-index: 100; background: #faf8f5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+        .mobile-menu.active { opacity: 1; pointer-events: all; }
 
-        .open-btn-pulse {
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            background: rgba(201, 169, 110, 0.4);
-            animation: pulse-ring 2s ease-out infinite;
-        }
+        .cal-day { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 13px; transition: all 0.3s ease; }
+        .cal-day-highlight { background: linear-gradient(135deg, #c9a96e, #e2d1a8); color: #2c2c2c; font-weight: 700; font-family: 'Cinzel', serif; font-size: 15px; box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2), 0 4px 15px rgba(201, 169, 110, 0.3); }
 
-        .open-btn-pulse-2 {
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            background: rgba(201, 169, 110, 0.35);
-            animation: pulse-ring 2s ease-out infinite;
-            animation-delay: 1s;
-        }
+        .open-btn-wrap { transition: opacity 0.6s ease, transform 0.6s ease; }
+        .open-btn-circle { position: relative; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #c9a96e, #e2d1a8); box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        @media (min-width: 768px) { .open-btn-circle { width: 64px; height: 64px; } }
+        .open-btn-wrap:hover .open-btn-circle { transform: scale(1.08); box-shadow: 0 8px 28px rgba(201, 169, 110, 0.5); }
+        .open-btn-pulse { position: absolute; inset: 0; border-radius: 50%; background: rgba(201, 169, 110, 0.4); animation: pulse-ring 2s ease-out infinite; }
+        .open-btn-pulse-2 { position: absolute; inset: 0; border-radius: 50%; background: rgba(201, 169, 110, 0.35); animation: pulse-ring 2s ease-out infinite; animation-delay: 1s; }
 
-        .lixi-card {
-            background: linear-gradient(145deg, #dc3545, #c82333, #a71d2a);
-            border-radius: 20px;
-            padding: 36px 28px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform .3s, box-shadow .3s;
-            box-shadow: 0 8px 30px rgba(220, 53, 69, .3)
-        }
+        .lixi-card { background: linear-gradient(145deg, #dc3545, #c82333, #a71d2a); border-radius: 20px; padding: 36px 28px; text-align: center; position: relative; overflow: hidden; cursor: pointer; transition: transform .3s, box-shadow .3s; box-shadow: 0 8px 30px rgba(220, 53, 69, .3) }
+        .lixi-card:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 40px rgba(220, 53, 69, .4) }
+        .lixi-card::before { content: ''; position: absolute; top: -30%; left: -30%; width: 160%; height: 160%; background: radial-gradient(circle, rgba(255, 215, 0, .08) 0%, transparent 70%); pointer-events: none }
+        .lixi-pattern { position: absolute; inset: 0; opacity: .06; pointer-events: none; background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 215, 0, .5) 10px, rgba(255, 215, 0, .5) 11px), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 215, 0, .5) 10px, rgba(255, 215, 0, .5) 11px) }
+        .lixi-gold { color: #ffd700 }
+        .lixi-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #ffd700, #f0c040); color: #8b1a24; font-weight: 700; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; padding: 14px 32px; border-radius: 50px; border: none; cursor: pointer; transition: all .3s; box-shadow: 0 4px 16px rgba(255, 215, 0, .4) }
+        .lixi-btn:hover { transform: scale(1.05); box-shadow: 0 6px 24px rgba(255, 215, 0, .5) }
 
-        .lixi-card:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(220, 53, 69, .4)
-        }
+        #lixi-popup { position: fixed; inset: 0; z-index: 200; background: rgba(10, 5, 5, .7); display: none; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity .3s; backdrop-filter: blur(4px) }
+        #lixi-popup.open { display: flex; opacity: 1 }
+        .lixi-popup-card { background: #fff; border-radius: 24px; max-width: 580px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, .3) }
 
-        .lixi-card::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            left: -30%;
-            width: 160%;
-            height: 160%;
-            background: radial-gradient(circle, rgba(255, 215, 0, .08) 0%, transparent 70%);
-            pointer-events: none
-        }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #faf8f5; }
+        ::-webkit-scrollbar-thumb { background: #c9a96e; border-radius: 3px; }
 
-        .lixi-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: .06;
-            pointer-events: none;
-            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 215, 0, .5) 10px, rgba(255, 215, 0, .5) 11px), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 215, 0, .5) 10px, rgba(255, 215, 0, .5) 11px)
-        }
-
-        .lixi-gold {
-            color: #ffd700
-        }
-
-        .lixi-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #ffd700, #f0c040);
-            color: #8b1a24;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            padding: 14px 32px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: all .3s;
-            box-shadow: 0 4px 16px rgba(255, 215, 0, .4)
-        }
-
-        .lixi-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 24px rgba(255, 215, 0, .5)
-        }
-
-        #lixi-popup {
-            position: fixed;
-            inset: 0;
-            z-index: 200;
-            background: rgba(10, 5, 5, .7);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity .3s;
-            backdrop-filter: blur(4px)
-        }
-
-        #lixi-popup.open {
-            display: flex;
-            opacity: 1
-        }
-
-        .lixi-popup-card {
-            background: #fff;
-            border-radius: 24px;
-            max-width: 580px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .3)
-        }
-
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #faf8f5;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #c9a96e;
-            border-radius: 3px;
-        }
+        /* Content trên hoa */
+        .above-floral { position: relative; z-index: 2; }
     </style>
 </head>
 
@@ -775,26 +259,14 @@
         <button onclick="toggleMobile()" class="absolute top-5 right-5">
             <i data-lucide="x" class="w-6 h-6 text-dark"></i>
         </button>
-
         <a href="#couple-info" onclick="toggleMobile()" class="text-2xl text-dark hover:text-gold transition-colors"
-            style="font-family: 'Times New Roman', Times, serif !important;">
-           Family
-        </a>
-
+            style="font-family: 'Times New Roman', Times, serif !important;">Family</a>
         <a href="#gallery" onclick="toggleMobile()" class="text-2xl text-dark hover:text-gold transition-colors"
-            style="font-family: 'Times New Roman', Times, serif !important;">
-            Gallery
-        </a>
-
+            style="font-family: 'Times New Roman', Times, serif !important;">Gallery</a>
         <a href="#our-story" onclick="toggleMobile()" class="text-2xl text-dark hover:text-gold transition-colors"
-            style="font-family: 'Times New Roman', Times, serif !important;">
-            Our Story
-        </a>
-
+            style="font-family: 'Times New Roman', Times, serif !important;">Our Story</a>
         <a href="#gift" onclick="toggleMobile()" class="text-2xl text-dark hover:text-gold transition-colors"
-            style="font-family: 'Times New Roman', Times, serif !important;">
-            Phong bao lì xì
-        </a>
+            style="font-family: 'Times New Roman', Times, serif !important;">Phong bao lì xì</a>
     </div>
 
     <!-- NAVIGATION -->
@@ -802,48 +274,35 @@
         style="transform: translateZ(0); will-change: background-color;">
         <div class="max-w-7xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between">
             <a href="#" class="font-script text-2xl md:text-3xl transition-colors duration-300" id="nav-logo"
-                style="color: #e2d1a8;">V & H</a>
+                style="color: #c9a96e;">V & H</a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="#couple-info"
-                    class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
-                    style="color: rgba(255,255,255,0.6);">Family</a>
-                <a href="#gallery"
-                    class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
-                    style="color: rgba(255,255,255,0.6);">Gallery</a>
-                <a href="#our-story"
-                    class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
-                    style="color: rgba(255,255,255,0.6);">Our Story</a>
+                <a href="#couple-info" class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
+                    style="color: rgba(44,44,44,0.55);">Family</a>
+                <a href="#gallery" class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
+                    style="color: rgba(44,44,44,0.55);">Gallery</a>
+                <a href="#our-story" class="text-[10px] font-display tracking-[0.2em] uppercase transition-colors duration-300 nav-link"
+                    style="color: rgba(44,44,44,0.55);">Our Story</a>
             </div>
-            <button class="md:hidden" onclick="toggleMobile()" id="menu-btn"><i data-lucide="menu"
-                    class="w-5 h-5"></i></button>
+            <button class="md:hidden" onclick="toggleMobile()" id="menu-btn" style="color:#2c2c2c;"><i data-lucide="menu" class="w-5 h-5"></i></button>
         </div>
     </nav>
 
-    <!-- ===== HERO ===== -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pb-12" style="background:
-        radial-gradient(circle at 50% 22%, rgba(226,209,168,0.25), transparent 36%),
-        radial-gradient(circle at 20% 80%, rgba(244,184,208,0.18), transparent 30%),
-        linear-gradient(180deg, #fbf8f1 0%, #f3eadf 48%, #eadcc9 100%);">
+    <!-- ===== HERO (CÓ HOA Ở 2 GÓC) ===== -->
+    <section id="hero" class="floral-section relative min-h-screen flex items-center justify-center overflow-hidden pb-12">
 
-        <div class="absolute inset-0 opacity-[0.28]" style="background-image:
-            linear-gradient(45deg, rgba(201,169,110,0.08) 25%, transparent 25%),
-            linear-gradient(-45deg, rgba(201,169,110,0.08) 25%, transparent 25%);
-            background-size: 44px 44px;">
-        </div>
+        <!-- HOA TRANG TRÍ
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tr">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-bl"> -->
 
-        <div class="absolute top-16 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full blur-3xl"
-            style="background: rgba(244,184,208,0.22);">
-        </div>
-
-        <div class="relative z-10 text-center px-6">
+        <div class="relative z-10 text-center px-6 above-floral">
             <p class="text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-display anim-fade-up d2"
-                style="color: rgba(44,44,44,0.45);">
+                style="color: rgba(44,44,44,0.55);">
                 Wedding Invitation
             </p>
 
             <div class="my-4 md:my-5 anim-fade-up d4">
                 <p class="font-body text-[11px] md:text-xs tracking-[0.25em] uppercase"
-                    style="color: rgba(44,44,44,0.72); font-weight: 600; font-family: 'Times New Roman', Times, serif;">
+                    style="color: rgba(44,44,44,0.78); font-weight: 600; font-family: 'Times New Roman', Times, serif;">
                     Quang Vũ
                 </p>
             </div>
@@ -855,7 +314,7 @@
 
             <div class="my-4 md:my-5 anim-fade-up d6">
                 <p class="font-body text-[11px] md:text-xs tracking-[0.25em] uppercase"
-                    style="color: rgba(44,44,44,0.72); font-weight: 600; font-family: 'Times New Roman', Times, serif;">
+                    style="color: rgba(44,44,44,0.78); font-weight: 600; font-family: 'Times New Roman', Times, serif;">
                     Hải Hà
                 </p>
             </div>
@@ -867,15 +326,14 @@
             </div>
 
             <p class="font-display text-sm md:text-lg tracking-[0.2em] anim-fade-up d8"
-                style="color: rgba(44,44,44,0.72);">
+                style="color: rgba(44,44,44,0.78);">
                 27 · 05 · 2026
             </p>
 
-            <!-- NÚT MỞ THIỆP -->
             <div class="mt-10 md:mt-14 anim-fade-up d9 open-btn-wrap" id="open-invitation-btn">
                 <button onclick="openInvitation()" class="group inline-flex flex-col items-center gap-3 cursor-pointer">
                     <span class="text-[10px] md:text-xs tracking-[0.4em] uppercase font-display"
-                        style="color: rgba(44,44,44,0.65); font-weight: 600; font-family: 'Montserrat';">
+                        style="color: rgba(44,44,44,0.7); font-weight: 600; font-family: 'Montserrat';">
                         Mở thiệp
                     </span>
                     <span class="open-btn-circle">
@@ -889,9 +347,14 @@
         </div>
     </section>
 
-    <!-- ===== COUPLE INFO ===== -->
-    <section id="couple-info" class="py-20 md:py-28 px-5 md:px-10 bg-white">
-        <div class="max-w-5xl mx-auto">
+    <!-- ===== COUPLE INFO (CÓ HOA Ở 2 GÓC) ===== -->
+    <section id="couple-info" class="floral-section py-20 md:py-28 px-5 md:px-10">
+
+        <!-- HOA TRANG TRÍ -->
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tr">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-bl">
+
+        <div class="max-w-5xl mx-auto above-floral">
             <div class="text-center mb-14 md:mb-20 reveal">
                 <p class="text-[9px] tracking-[0.35em] uppercase font-display text-gold mb-3"
                     style="font-family: 'Times New Roman', Times, serif;">Gia đình</p>
@@ -910,12 +373,10 @@
                         style="font-family: 'Cormorant Garamond'; font-weight: 600; letter-spacing: 0.02em;">
                         Chu Quang Vũ
                     </h3>
-
                     <div class="deco-line max-w-[60px] mx-auto mb-4"></div>
-                    <p class="text-sm text-dark/45 leading-relaxed">
-                        Mẹ: <span class="text-dark/65"
-                            style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Lưu Thị Hồng
-                            Vân</span>
+                    <p class="text-sm text-dark/55 leading-relaxed">
+                        Mẹ: <span class="text-dark/75"
+                            style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Lưu Thị Hồng Vân</span>
                     </p>
                 </div>
                 <div class="text-center reveal">
@@ -926,11 +387,10 @@
                         Nguyễn Thị Hải Hà
                     </h3>
                     <div class="deco-line max-w-[60px] mx-auto mb-4"></div>
-                    <p class="text-sm text-dark/45 leading-relaxed">
-                        Bố: <span class="text-dark/65"
-                            style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Nguyễn Văn
-                            Toàn</span><br>
-                        Mẹ: <span class="text-dark/65"
+                    <p class="text-sm text-dark/55 leading-relaxed">
+                        Bố: <span class="text-dark/75"
+                            style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Nguyễn Văn Toàn</span><br>
+                        Mẹ: <span class="text-dark/75"
                             style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Thân Thị Sen</span>
                     </p>
                 </div>
@@ -954,8 +414,8 @@
             <div class="absolute bottom-0 left-0 right-0 pb-10 md:pb-16 pointer-events-none">
                 <div class="max-w-6xl mx-auto px-5 md:px-10">
                     <p class="text-[8px] md:text-[9px] tracking-[0.5em] uppercase font-display mb-1.5"
-                        style="color: rgba(44,44,44,0.3);">Our Moments</p>
-                    <h2 class="font-display text-2xl md:text-6xl text-dark">Gallery</h2>
+                        style="color: rgb(0, 0, 0); font-family: 'Montserrat';">Our Moments</p>
+                    <h2 class="font-display text-2xl md:text-6xl text-dark">album</h2>
                 </div>
             </div>
         </div>
@@ -1035,58 +495,40 @@
         </div>
         <div class="flex gap-3 md:gap-6 overflow-x-auto px-5 md:px-10 pb-5 md:pb-6 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing"
             id="hscroll" style="scrollbar-width: none;">
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 68vw; max-width: 420px;"
-                onclick="openLightbox(0)">
-                <img src="https://i.ibb.co/XxJQcxxm/DSC04126.jpg" alt="01" class="w-full rounded-lg"
-                    style="height: 460px; object-fit: cover; object-position: center 25%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 68vw; max-width: 420px;" onclick="openLightbox(0)">
+                <img src="https://i.ibb.co/XxJQcxxm/DSC04126.jpg" alt="01" class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 25%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">01</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;"
-                onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/XkxZ19K6/DSC03873.jpg" alt="09" class="w-full rounded-lg"
-                    style="height: 420px; object-fit: cover; object-position: center 35%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(9)">
+                <img src="https://i.ibb.co/XkxZ19K6/DSC03873.jpg" alt="09" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">02</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;"
-                onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/whtyfVPV/DSC04209.jpg" alt="03" class="w-full rounded-lg"
-                    style="height: 480px; object-fit: cover; object-position: center 22%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(3)">
+                <img src="https://i.ibb.co/whtyfVPV/DSC04209.jpg" alt="03" class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">03</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 300px;"
-                onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/M55xMHZq/DSC02030.jpg" alt="04" class="w-full rounded-lg"
-                    style="height: 400px; object-fit: cover; object-position: center 28%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 300px;" onclick="openLightbox(2)">
+                <img src="https://i.ibb.co/M55xMHZq/DSC02030.jpg" alt="04" class="w-full rounded-lg" style="height: 400px; object-fit: cover; object-position: center 28%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">04</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;"
-                onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/qFsVJBHM/DSC04331.jpg" alt="05" class="w-full rounded-lg"
-                    style="height: 420px; object-fit: cover; object-position: center 35%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(4)">
+                <img src="https://i.ibb.co/qFsVJBHM/DSC04331.jpg" alt="05" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">05</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 300px;"
-                onclick="openLightbox(6)">
-                <img src="https://i.ibb.co/v6hNHBQG/DSC04449.jpg" alt="06" class="w-full rounded-lg"
-                    style="height: 480px; object-fit: cover; object-position: center 22%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 300px;" onclick="openLightbox(6)">
+                <img src="https://i.ibb.co/v6hNHBQG/DSC04449.jpg" alt="06" class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">06</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;"
-                onclick="openLightbox(7)">
-                <img src="https://i.ibb.co/35yXCDxT/DSC04468.jpg" alt="07" class="w-full rounded-lg"
-                    style="height: 400px; object-fit: cover; object-position: center 28%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(7)">
+                <img src="https://i.ibb.co/35yXCDxT/DSC04468.jpg" alt="07" class="w-full rounded-lg" style="height: 400px; object-fit: cover; object-position: center 28%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">07</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 300px;"
-                onclick="openLightbox(8)">
-                <img src="https://i.ibb.co/nMttgjxS/DSC04532.jpg" alt="08" class="w-full rounded-lg"
-                    style="height: 420px; object-fit: cover; object-position: center 22%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 300px;" onclick="openLightbox(8)">
+                <img src="https://i.ibb.co/nMttgjxS/DSC04532.jpg" alt="08" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">08</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;"
-                onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/qMGK3LVc/DSC04062.jpg" alt="09" class="w-full rounded-lg"
-                    style="height: 460px; object-fit: cover; object-position: center 35%;">
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(9)">
+                <img src="https://i.ibb.co/qMGK3LVc/DSC04062.jpg" alt="09" class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">09</p>
             </div>
         </div>
@@ -1098,9 +540,14 @@
         </div>
     </section>
 
-    <!-- ===== SAVE THE DATE ===== -->
-    <section id="save-date" class="py-20 md:py-32 px-5 md:px-10">
-        <div class="max-w-4xl mx-auto">
+    <!-- ===== SAVE THE DATE (CÓ HOA Ở 2 GÓC NHỎ) ===== -->
+    <section id="save-date" class="floral-section py-20 md:py-32 px-5 md:px-10">
+
+        <!-- HOA TRANG TRÍ -->
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tl">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-br">
+
+        <div class="max-w-4xl mx-auto above-floral">
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm reveal">
                 <div class="grid md:grid-cols-2">
                     <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
@@ -1112,14 +559,12 @@
                                     Thứ Tư · Dương lịch: 27 tháng 5 năm 2026
                                 </span>
                             </div>
-
                             <div class="flex items-center gap-3">
                                 <i data-lucide="map-pin" class="w-4 h-4 text-gold flex-shrink-0"></i>
                                 <span style="font-family: 'Times New Roman', Times, serif;">
                                     Promes Center - 10h30 sảnh tiệc tầng 3 Peony
                                 </span>
                             </div>
-
                             <div class="flex items-start gap-3">
                                 <i data-lucide="navigation" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5"></i>
                                 <span class="flex items-start gap-3"
@@ -1146,20 +591,23 @@
         </div>
     </section>
 
-    <!-- ===== PHONG BAO LÌ XÌ ===== -->
-    <section id="gift" class="py-20 md:py-28 px-5 md:px-10 bg-white">
-        <div class="max-w-md mx-auto">
+    <!-- ===== PHONG BAO LÌ XÌ (CÓ HOA Ở 2 GÓC) ===== -->
+    <section id="gift" class="floral-section py-20 md:py-28 px-5 md:px-10">
+
+        <!-- HOA TRANG TRÍ -->
+        <!-- <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tr">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-bl"> -->
+
+        <div class="max-w-md mx-auto above-floral">
             <div class="text-center reveal mb-8">
                 <p class="text-[9px] tracking-[0.35em] uppercase text-gold mb-3"
                     style="font-family: 'Montserrat'; font-weight: 1000;">
                     Hộp hồng phúc
                 </p>
-
                 <h2 class="font-body text-2xl md:text-3xl text-dark mb-4">
                     Phong bao lì xì
                 </h2>
-
-                <p class="text-sm text-dark/50 font-body">
+                <p class="text-sm text-dark/55 font-body">
                     Mỗi lời chúc, mỗi món quà đều là tình cảm quý giá
                 </p>
             </div>
@@ -1167,47 +615,35 @@
             <div class="reveal flex justify-center">
                 <div class="lixi-card w-full max-w-xs" onclick="openLixi()">
                     <div class="lixi-pattern"></div>
-
                     <div class="relative z-10">
                         <div class="flex justify-center mb-3">
                             <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
-                                <path d="M30,2C26,10 18,16 10,20C18,18 26,16 30,14C34,16 42,18 50,20C42,16 34,10 30,2Z"
-                                    fill="rgba(255,215,0,.3)" />
-                                <path d="M30,6C28,11 22,14 16,16C22,15 28,13 30,12C32,13 38,15 44,16C38,14 32,11 30,6Z"
-                                    fill="rgba(255,215,0,.5)" />
+                                <path d="M30,2C26,10 18,16 10,20C18,18 26,16 30,14C34,16 42,18 50,20C42,16 34,10 30,2Z" fill="rgba(255,215,0,.3)" />
+                                <path d="M30,6C28,11 22,14 16,16C22,15 28,13 30,12C32,13 38,15 44,16C38,14 32,11 30,6Z" fill="rgba(255,215,0,.5)" />
                                 <circle cx="30" cy="8" r="3" fill="rgba(255,215,0,.6)" />
                             </svg>
                         </div>
-
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border"
                             style="background:rgba(255,215,0,.12);border-color:rgba(255,215,0,.25);">
                             <i data-lucide="heart" class="w-7 h-7 text-yellow-400"></i>
                         </div>
-
                         <p class="text-lg lixi-gold font-semibold mb-1"
                             style="font-family: 'Inter', 'Roboto', Arial, sans-serif;">
                             Phong bao lì xì
                         </p>
-
                         <p class="text-xs text-red-100 mb-5" style="font-family: 'Inter', 'Roboto', Arial, sans-serif;">
                             Mọi lời chúc đều quý giá
                         </p>
-
                         <button type="button" class="lixi-btn"
                             style="font-family:'Montserrat', 'Inter', 'Roboto', Arial, sans-serif;"
                             onclick="event.stopPropagation();openLixi()">
                             <i data-lucide="gift" class="w-4 h-4"></i>
                             Mở lì xì
                         </button>
-
                         <div class="flex justify-center mt-4">
                             <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
-                                <path
-                                    d="M30,28C34,20 42,14 50,10C42,12 34,14 30,16C26,14 18,12 10,10C18,14 26,20 30,28Z"
-                                    fill="rgba(255,215,0,.3)" />
-                                <path
-                                    d="M30,24C32,19 38,16 44,14C38,15 32,17 30,18C28,17 22,15 16,14C22,16 28,19 30,24Z"
-                                    fill="rgba(255,215,0,.5)" />
+                                <path d="M30,28C34,20 42,14 50,10C42,12 34,14 30,16C26,14 18,12 10,10C18,14 26,20 30,28Z" fill="rgba(255,215,0,.3)" />
+                                <path d="M30,24C32,19 38,16 44,14C38,15 32,17 30,18C28,17 22,15 16,14C22,16 28,19 30,24Z" fill="rgba(255,215,0,.5)" />
                                 <circle cx="30" cy="22" r="3" fill="rgba(255,215,0,.6)" />
                             </svg>
                         </div>
@@ -1216,7 +652,7 @@
             </div>
 
             <div class="reveal text-center mt-6">
-                <p class="font-body italic text-sm text-dark/45">
+                <p class="font-body italic text-sm text-dark/55">
                     "Tình cảm của quý vị là món quà vô giá đối với chúng tôi"
                 </p>
             </div>
@@ -1235,8 +671,7 @@
                 </button>
                 <div class="relative z-10">
                     <div class="flex justify-center mb-2"><svg width="50" height="25" viewBox="0 0 60 30" fill="none">
-                            <path d="M30,2C26,10 18,16 10,20C18,18 26,16 30,14C34,16 42,18 50,20C42,16 34,10 30,2Z"
-                                fill="rgba(255,215,0,.35)" />
+                            <path d="M30,2C26,10 18,16 10,20C18,18 26,16 30,14C34,16 42,18 50,20C42,16 34,10 30,2Z" fill="rgba(255,215,0,.35)" />
                             <circle cx="30" cy="8" r="3" fill="rgba(255,215,0,.5)" />
                         </svg></div>
                     <p class="text-xl text-yellow-400" style="font-family: 'Montserrat'; font-weight: 1000;">
@@ -1247,8 +682,6 @@
             </div>
             <div class="px-5 py-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                    <!-- CHÚ RỂ -->
                     <div class="text-center p-4 rounded-2xl border border-dark/10" style="background:#faf8f5;">
                         <div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-2">
                             <i data-lucide="user" class="w-4 h-4 text-blue-500"></i>
@@ -1256,20 +689,12 @@
                         <p class="text-[10px] tracking-wider uppercase text-dark/35 mb-1">Chú rể</p>
                         <p class="font-body text-sm text-dark font-semibold">Chu Quang Vũ</p>
                         <p class="text-xs text-dark/40 mb-3">Ngân hàng SHB</p>
-
-                        <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">
-                            1413114119
-                        </p>
-
-                        <!-- QR CHÚ RỂ -->
+                        <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">1413114119</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
                             <img src="https://i.ibb.co/390N2FvR/Screenshot-2026-05-07-220211.png"
                                 alt="QR chuyển khoản chú rể" class="w-44 h-auto rounded-xl mx-auto">
                         </div>
-                        <p class="text-[11px] text-dark/45 mt-2">
-                            Quét mã QR chuyển khoản chú rể
-                        </p>
-
+                        <p class="text-[11px] text-dark/45 mt-2">Quét mã QR chuyển khoản chú rể</p>
                         <button onclick="copyBank('1413114119', this)"
                             class="mt-3 inline-flex items-center gap-1 text-xs text-dark/45 hover:text-dark transition-colors">
                             <i data-lucide="copy" class="w-3 h-3"></i>
@@ -1277,7 +702,6 @@
                         </button>
                     </div>
 
-                    <!-- CÔ DÂU -->
                     <div class="text-center p-4 rounded-2xl border border-dark/10" style="background:#faf8f5;">
                         <div class="w-9 h-9 rounded-full bg-pink-50 flex items-center justify-center mx-auto mb-2">
                             <i data-lucide="heart" class="w-4 h-4 text-rose-deep"></i>
@@ -1285,27 +709,18 @@
                         <p class="text-[10px] tracking-wider uppercase text-dark/35 mb-1">Cô dâu</p>
                         <p class="font-body text-sm text-dark font-semibold">Nguyễn Thị Hải Hà</p>
                         <p class="text-xs text-dark/40 mb-3">Ngân hàng VIB</p>
-
-                        <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">
-                            027626798
-                        </p>
-
-                        <!-- QR Cô Dâu-->
+                        <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">027626798</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
                             <img src="https://i.ibb.co/bj6KT7qs/Screenshot-2026-05-07-220025.png"
                                 alt="QR chuyển khoản cô dâu" class="w-44 h-auto rounded-xl mx-auto">
                         </div>
-                        <p class="text-[11px] text-dark/45 mt-2">
-                            Quét mã QR chuyển khoản cô dâu
-                        </p>
-
+                        <p class="text-[11px] text-dark/45 mt-2">Quét mã QR chuyển khoản cô dâu</p>
                         <button onclick="copyBank('027626798', this)"
                             class="mt-3 inline-flex items-center gap-1 text-xs text-dark/45 hover:text-dark transition-colors">
                             <i data-lucide="copy" class="w-3 h-3"></i>
                             <span>Sao chép STK</span>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -1320,43 +735,28 @@
                 <span style="color: #f4b8d0; font-size: 11px;">♥</span>
                 <div class="h-px w-8" style="background: rgba(255,255,255,0.08);"></div>
             </div>
-            <p class="font-display text-sm tracking-[0.15em] mb-1" style="color: rgba(255,255,255,0.5);">27 · 05 · 2026
-            </p>
+            <p class="font-display text-sm tracking-[0.15em] mb-1" style="color: rgba(255,255,255,0.5);">27 · 05 · 2026</p>
             <p class="text-[10px] mb-8" style="color: rgba(255,255,255,0.2);">Promes Center</p>
             <div class="deco-line-dark max-w-[120px] mx-auto mb-8"></div>
             <p class="text-[9px] tracking-[0.2em] uppercase font-display"
-                style="color: rgba(255,255,255,0.15); font-family: 'Times New Roman', Times, serif; font-weight: 2500px;">Made
-                with ♥ for Quang Vũ & Hải Hà</p>
+                style="color: rgba(255,255,255,0.15); font-family: 'Times New Roman', Times, serif;">Made with ♥ for Quang Vũ & Hải Hà</p>
         </div>
     </footer>
 
     <script>
-        /* ============================================
-           NHẠC NỀN
-        ============================================ */
         let musicStarted = false;
         function playMusicOnce() {
             if (musicStarted) return;
             const music = document.getElementById('bg-music');
             if (music) {
                 music.volume = 0.5;
-                music.play()
-                    .then(() => { musicStarted = true; })
-                    .catch(err => console.log('Không phát được nhạc:', err));
+                music.play().then(() => { musicStarted = true; }).catch(err => console.log('Không phát được nhạc:', err));
             }
         }
 
-        /* ============================================
-           MỞ THIỆP — Bắt đầu nhạc + auto scroll
-        ============================================ */
         function openInvitation() {
             const btnWrap = document.getElementById('open-invitation-btn');
-
-            // 1. BẮT ĐẦU CUỘN NGAY LẬP TỨC trong sync chain của click
-            //    (iOS Safari yêu cầu scrollTo programmatic phải nằm trong user gesture)
             startAutoScroll();
-
-            // 2. Hiệu ứng fade opacity 5s — đứng yên tại chỗ, giữ nguyên cấu trúc
             if (btnWrap) {
                 btnWrap.style.animation = 'none';
                 btnWrap.style.transition = 'opacity 5s ease';
@@ -1364,18 +764,11 @@
                 void btnWrap.offsetWidth;
                 btnWrap.style.opacity = '0';
             }
-
-            // 3. Phát nhạc sau một chút để không tranh tài nguyên với lệnh cuộn đầu tiên
-            setTimeout(() => {
-                playMusicOnce();
-            }, 100);
+            setTimeout(() => { playMusicOnce(); }, 100);
         }
 
-        /* ============================================
-           IMAGES & LIGHTBOX
-        ============================================ */
         const images = [
-             'https://i.ibb.co/XxJQcxxm/DSC04126.jpg',
+            'https://i.ibb.co/XxJQcxxm/DSC04126.jpg',
             'https://i.ibb.co/XkxZ19K6/DSC03873.jpg',
             'https://i.ibb.co/whtyfVPV/DSC04209.jpg',
             'https://i.ibb.co/M55xMHZq/DSC02030.jpg',
@@ -1413,33 +806,22 @@
 
         lucide.createIcons();
 
-        /* ============================================
-           NAVBAR
-        ============================================ */
-        const navbar = document.getElementById('navbar'), navLogo = document.getElementById('nav-logo'), menuBtn = document.getElementById('menu-btn'), navLinks = document.querySelectorAll('.nav-link');
+        const navbar = document.getElementById('navbar'), navLogo = document.getElementById('nav-logo'),
+            menuBtn = document.getElementById('menu-btn'), navLinks = document.querySelectorAll('.nav-link');
         window.addEventListener('scroll', () => {
             const y = window.scrollY;
             if (y > 80) {
                 navbar.style.background = 'rgba(250,248,245,0.92)'; navbar.style.backdropFilter = 'blur(12px)';
-                navbar.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04)'; navLogo.style.color = '#c9a96e';
-                navLinks.forEach(l => l.style.color = 'rgba(44,44,44,0.5)'); if (menuBtn) menuBtn.style.color = '#2c2c2c';
+                navbar.style.boxShadow = '0 1px 0 rgba(0,0,0,0.04)';
             } else {
                 navbar.style.background = 'transparent'; navbar.style.backdropFilter = 'none'; navbar.style.boxShadow = 'none';
-                navLogo.style.color = '#e2d1a8'; navLinks.forEach(l => l.style.color = 'rgba(255,255,255,0.6)');
-                if (menuBtn) menuBtn.style.color = '#ffffff';
             }
         }, { passive: true });
         function toggleMobile() { document.getElementById('mobile-menu').classList.toggle('active'); }
 
-        /* ============================================
-           REVEAL
-        ============================================ */
         const revealObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-        /* ============================================
-           GALLERY PARALLAX
-        ============================================ */
         const galleryHero = document.getElementById('gallery-hero-img');
         function updateHeroColor() {
             if (!galleryHero) return;
@@ -1449,9 +831,6 @@
         }
         window.addEventListener('scroll', updateHeroColor, { passive: true });
 
-        /* ============================================
-           HORIZONTAL SCROLL
-        ============================================ */
         const hscroll = document.getElementById('hscroll'), scrollProgress = document.getElementById('scroll-progress');
         let isDown = false, startX = 0, hScrollLeft = 0, hasDragged = false;
         function updateScrollProgress() { if (!hscroll || !scrollProgress) return; const max = hscroll.scrollWidth - hscroll.clientWidth; scrollProgress.style.width = (max > 0 ? (hscroll.scrollLeft / max) * 100 : 0) + '%'; }
@@ -1465,9 +844,6 @@
             hscroll.style.cursor = 'grab';
         }
 
-        /* ============================================
-           LÌ XÌ POPUP
-        ============================================ */
         function openLixi() {
             const popup = document.getElementById('lixi-popup');
             if (!popup) return;
@@ -1484,14 +860,9 @@
         }
         const lixiPopup = document.getElementById('lixi-popup');
         if (lixiPopup) {
-            lixiPopup.addEventListener('click', function (e) {
-                if (e.target === lixiPopup) closeLixi();
-            });
+            lixiPopup.addEventListener('click', function (e) { if (e.target === lixiPopup) closeLixi(); });
         }
 
-        /* ============================================
-           COPY & TOAST
-        ============================================ */
         function copyBank(num, btn) {
             navigator.clipboard.writeText(num).then(() => {
                 const span = btn.querySelector('span'); const orig = span.textContent;
@@ -1502,9 +873,6 @@
         }
         function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); }
 
-        /* ============================================
-           PETALS
-        ============================================ */
         function createPetal() {
             const box = document.getElementById('petals-box'); const p = document.createElement('div'); p.classList.add('petal');
             const colors = ['#f4b8d0', '#c8b8e8', '#e8d0e0', '#d4c0ee', '#f0d0dd'];
@@ -1516,9 +884,6 @@
         setInterval(createPetal, 1500);
         for (let i = 0; i < 3; i++) setTimeout(createPetal, i * 500);
 
-        /* ============================================
-           ANCHOR LINKS
-        ============================================ */
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => {
                 e.preventDefault(); pauseAutoScroll();
@@ -1527,79 +892,40 @@
             });
         });
 
-        /* ============================================
-           AUTO SCROLL (tương thích iOS Safari)
-        ============================================ */
-        let autoScrollActive = false;
-        let autoScrollPaused = false;
-        let autoScrollRAF = null;
-        let resumeTimeout = null;
-        let scrollSpeed = 0;
-        let virtualY = 0; // vị trí ảo tích luỹ — fix iOS không nhận giá trị lẻ
-        const MAX_SCROLL_SPEED = 1.2;
-        const SCROLL_ACCELERATION = 0.015;
-        const RESUME_DELAY = 5000;
-        const SYNC_THRESHOLD = 8; // px lệch tối đa trước khi sync lại
+        let autoScrollActive = false, autoScrollPaused = false, autoScrollRAF = null, resumeTimeout = null,
+            scrollSpeed = 0, virtualY = 0;
+        const MAX_SCROLL_SPEED = 1.2, SCROLL_ACCELERATION = 0.015, RESUME_DELAY = 5000, SYNC_THRESHOLD = 8;
 
         function isAtBottom() {
             const currentScroll = window.scrollY || document.documentElement.scrollTop;
             return window.innerHeight + currentScroll >= document.body.scrollHeight - 5;
         }
-
         function startAutoScroll() {
             if (autoScrollActive) return;
-            autoScrollActive = true;
-            autoScrollPaused = false;
-            scrollSpeed = 0.3; // bắt đầu mượt
-            virtualY = window.scrollY || document.documentElement.scrollTop;
+            autoScrollActive = true; autoScrollPaused = false;
+            scrollSpeed = 0.3; virtualY = window.scrollY || document.documentElement.scrollTop;
             let lastScrolledY = Math.round(virtualY);
-
-            // Tắt hoàn toàn smooth scroll bằng JS để chắc chắn không xung đột
             document.documentElement.style.scrollBehavior = 'auto';
-
             function tick() {
-                if (!autoScrollActive) {
-                    autoScrollRAF = null;
-                    return;
-                }
-                if (isAtBottom()) {
-                    autoScrollActive = false;
-                    autoScrollRAF = null;
-                    return;
-                }
+                if (!autoScrollActive) { autoScrollRAF = null; return; }
+                if (isAtBottom()) { autoScrollActive = false; autoScrollRAF = null; return; }
                 if (!autoScrollPaused) {
                     const currentScrollY = window.scrollY || document.documentElement.scrollTop;
-                    // Đồng bộ nếu user vừa cuộn tay
-                    if (Math.abs(virtualY - currentScrollY) > SYNC_THRESHOLD) {
-                        virtualY = currentScrollY;
-                        lastScrolledY = Math.round(virtualY);
-                    }
+                    if (Math.abs(virtualY - currentScrollY) > SYNC_THRESHOLD) { virtualY = currentScrollY; lastScrolledY = Math.round(virtualY); }
                     scrollSpeed = Math.min(scrollSpeed + SCROLL_ACCELERATION, MAX_SCROLL_SPEED);
                     virtualY += scrollSpeed;
-                    // Chỉ scrollTo khi pixel nguyên thực sự thay đổi → smooth, không giật
                     const targetY = Math.round(virtualY);
-                    if (targetY !== lastScrolledY) {
-                        window.scrollTo(0, targetY);
-                        lastScrolledY = targetY;
-                    }
+                    if (targetY !== lastScrolledY) { window.scrollTo(0, targetY); lastScrolledY = targetY; }
                 }
                 autoScrollRAF = requestAnimationFrame(tick);
             }
             autoScrollRAF = requestAnimationFrame(tick);
         }
-
         function pauseAutoScroll() {
-            // Chỉ pause khi auto scroll đã bắt đầu — bỏ qua cú click khởi động
             if (!autoScrollActive) return;
-            autoScrollPaused = true;
-            clearTimeout(resumeTimeout);
-            resumeTimeout = setTimeout(() => {
-                autoScrollPaused = false;
-                // Đồng bộ lại virtualY với vị trí thực tế
-                virtualY = window.scrollY || document.documentElement.scrollTop;
-            }, RESUME_DELAY);
+            autoScrollPaused = true; clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => { autoScrollPaused = false; virtualY = window.scrollY || document.documentElement.scrollTop; }, RESUME_DELAY);
         }
-
         window.addEventListener('wheel', pauseAutoScroll, { passive: true });
         window.addEventListener('touchstart', pauseAutoScroll, { passive: true });
         window.addEventListener('mousedown', pauseAutoScroll, { passive: true });
