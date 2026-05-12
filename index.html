@@ -22,6 +22,14 @@
 <meta name="twitter:image" content="https://i.ibb.co/SX1qYPBB/DSC04099.jpg">
     <title>Quang Vũ & Hải Hà — 27.05.2026</title>
 
+    <!-- ===== PRELOAD ẢNH QUAN TRỌNG (LCP / Above-the-fold) ===== -->
+    <link rel="preload" as="image" href="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://i.ibb.co/k6cKymgs/DSC04528.jpg">
+    <link rel="preload" as="image" href="https://i.ibb.co/fYLGGtqh/DSC02404.jpg">
+    <!-- Preconnect tới CDN ảnh để giảm RTT -->
+    <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+    <link rel="dns-prefetch" href="https://i.ibb.co">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,7 +255,7 @@
         <button onclick="event.stopPropagation(); navLightbox(1)"
             class="absolute right-3 md:right-7 text-white/40 hover:text-white transition-colors z-10 p-2"><i
                 data-lucide="chevron-right" class="w-9 h-9"></i></button>
-        <img id="lb-img" src="" alt="Photo" onclick="event.stopPropagation()">
+        <img id="lb-img" src="" alt="Photo" onclick="event.stopPropagation()" decoding="async">
         <div class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/40 text-xs tracking-widest font-display"
             id="lb-counter"></div>
     </div>
@@ -399,8 +407,13 @@
     <!-- ===== GALLERY ===== -->
     <section id="gallery">
         <div class="relative h-[50vh] md:h-[85vh] overflow-hidden reveal cursor-pointer" onclick="openLightbox(1)">
-            <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="Gallery Hero"
-                class="gallery-hero-img w-full h-full object-cover" id="gallery-hero-img"
+            <!-- ẢNH HERO GALLERY: fetchpriority="high", KHÔNG lazy -->
+            <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg"
+                alt="Gallery Hero"
+                fetchpriority="high"
+                decoding="async"
+                class="gallery-hero-img w-full h-full object-cover"
+                id="gallery-hero-img"
                 style="object-position: center 20%; filter: brightness(0.88) saturate(0.92) contrast(1.03);">
             <div class="absolute inset-0"
                 style="background: linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, transparent 20%, transparent 30%, rgba(250,248,245,1) 100%);">
@@ -419,22 +432,30 @@
         </div>
         <div class="mobile-grid px-4 pt-6 pb-4">
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/1fZSqWZP/DSC02520.jpg" alt="02" style="object-position:center 28%;">
+                <img src="https://i.ibb.co/1fZSqWZP/DSC02520.jpg" alt="02"
+                    loading="lazy" decoding="async"
+                    style="object-position:center 28%;">
                 <p class="art-num">02</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03" style="object-position:center 22%;">
+                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
+                    loading="lazy" decoding="async"
+                    style="object-position:center 22%;">
                 <p class="art-num">03</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04" style="object-position:center 22%;">
+                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
+                    loading="lazy" decoding="async"
+                    style="object-position:center 22%;">
                 <p class="art-num">04</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(1)">
-                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="05" style="object-position:center 22%;">
+                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="05"
+                    loading="lazy" decoding="async"
+                    style="object-position:center 22%;">
                 <p class="art-num">05</p>
                 <div class="art-line"></div>
             </div>
@@ -446,19 +467,25 @@
         </p>
         <div class="desktop-grid grid-cols-12 gap-3 md:gap-5 max-w-6xl mx-auto px-5 md:px-10 py-8 md:py-14">
             <div class="col-span-7 art-gallery-item rounded-lg reveal" onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="02" class="w-full"
+                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="02"
+                    loading="lazy" decoding="async"
+                    class="w-full"
                     style="aspect-ratio:4/5; object-fit:cover; object-position:center 28%;">
                 <p class="art-num">02</p>
                 <div class="art-line"></div>
             </div>
             <div class="col-span-5 art-gallery-item rounded-lg reveal" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03" class="w-full"
+                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
+                    loading="lazy" decoding="async"
+                    class="w-full"
                     style="aspect-ratio:3/4; object-fit:cover; object-position:center 22%;">
                 <p class="art-num">03</p>
                 <div class="art-line"></div>
             </div>
             <div class="col-span-12 art-gallery-item rounded-lg reveal" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04" class="w-full"
+                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
+                    loading="lazy" decoding="async"
+                    class="w-full"
                     style="aspect-ratio:21/9; object-fit:cover; object-position:center 35%;">
                 <p class="art-num">04</p>
                 <div class="art-line"></div>
@@ -494,39 +521,57 @@
         <div class="flex gap-3 md:gap-6 overflow-x-auto px-5 md:px-10 pb-5 md:pb-6 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing"
             id="hscroll" style="scrollbar-width: none;">
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 68vw; max-width: 420px;" onclick="openLightbox(0)">
-                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="01" class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 25%;">
+                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="01"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 25%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">01</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/yBh5My9M/DSC03654.jpg" alt="09" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
+                <img src="https://i.ibb.co/yBh5My9M/DSC03654.jpg" alt="09"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">02</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03" class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
+                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">03</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 350px;"  onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04" class="w-full rounded-lg" style="height: 350px; object-fit: cover; object-position: center 35%;">
+                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 350px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">04</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="05" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
+                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="05"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">05</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 340px;" onclick="openLightbox(6)">
-                <img src="https://i.ibb.co/bj5rQ41N/DSC04442.jpg" alt="06" class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
+                <img src="https://i.ibb.co/bj5rQ41N/DSC04442.jpg" alt="06"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">06</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(7)">
-                <img src="https://i.ibb.co/rKF1X9cZ/DSC04326.jpg" alt="07" class="w-full rounded-lg" style="height: 400px; object-fit: cover; object-position: center 28%;">
+                <img src="https://i.ibb.co/rKF1X9cZ/DSC04326.jpg" alt="07"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 400px; object-fit: cover; object-position: center 28%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">07</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 300px;" onclick="openLightbox(8)">
-                <img src="https://i.ibb.co/7d0QTdNF/DSC02830.jpg" alt="08" class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 22%;">
+                <img src="https://i.ibb.co/7d0QTdNF/DSC02830.jpg" alt="08"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">08</p>
             </div>
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/x81Yx3yS/DSC04204.jpg" alt="09" class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 35%;">
+                <img src="https://i.ibb.co/x81Yx3yS/DSC04204.jpg" alt="09"
+                    loading="lazy" decoding="async"
+                    class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">09</p>
             </div>
         </div>
@@ -542,8 +587,8 @@
     <section id="save-date" class="floral-section py-20 md:py-32 px-5 md:px-10">
 
         <!-- HOA TRANG TRÍ -->
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tl">
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-br">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tl" loading="lazy" decoding="async">
+        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-br" loading="lazy" decoding="async">
 
         <div class="max-w-4xl mx-auto above-floral">
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm reveal">
@@ -684,7 +729,9 @@
                         <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">1413114119</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
                             <img src="https://i.ibb.co/390N2FvR/Screenshot-2026-05-07-220211.png"
-                                alt="QR chuyển khoản chú rể" class="w-44 h-auto rounded-xl mx-auto">
+                                alt="QR chuyển khoản chú rể"
+                                loading="lazy" decoding="async"
+                                class="w-44 h-auto rounded-xl mx-auto">
                         </div>
                         <p class="text-[11px] text-dark/45 mt-2">Quét mã QR chuyển khoản chú rể</p>
                         <button onclick="copyBank('1413114119', this)"
@@ -704,7 +751,9 @@
                         <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">027626798</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
                             <img src="https://i.ibb.co/bj6KT7qs/Screenshot-2026-05-07-220025.png"
-                                alt="QR chuyển khoản cô dâu" class="w-44 h-auto rounded-xl mx-auto">
+                                alt="QR chuyển khoản cô dâu"
+                                loading="lazy" decoding="async"
+                                class="w-44 h-auto rounded-xl mx-auto">
                         </div>
                         <p class="text-[11px] text-dark/45 mt-2">Quét mã QR chuyển khoản cô dâu</p>
                         <button onclick="copyBank('027626798', this)"
@@ -746,19 +795,6 @@
             }
         }
 
-        function openInvitation() {
-            const btnWrap = document.getElementById('open-invitation-btn');
-            startAutoScroll();
-            if (btnWrap) {
-                btnWrap.style.animation = 'none';
-                btnWrap.style.transition = 'opacity 5s ease';
-                btnWrap.style.pointerEvents = 'none';
-                void btnWrap.offsetWidth;
-                btnWrap.style.opacity = '0';
-            }
-            setTimeout(() => { playMusicOnce(); }, 100);
-        }
-
         const images = [
             'https://i.ibb.co/r2KHzp1P/DSC04137.jpg',
             'https://i.ibb.co/yBh5My9M/DSC03654.jpg',
@@ -769,8 +805,42 @@
             'https://i.ibb.co/rKF1X9cZ/DSC04326.jpg',
             'https://i.ibb.co/7d0QTdNF/DSC02830.jpg',
             'https://i.ibb.co/x81Yx3yS/DSC04204.jpg',
+            'https://i.ibb.co/1fZSqWZP/DSC02520.jpg',
         ];
         let lbIndex = 0;
+
+        // ===== PRELOAD TOÀN BỘ ẢNH GALLERY / LIGHTBOX =====
+        function preloadGalleryImages() {
+            images.forEach(src => {
+                const img = new Image();
+                img.decoding = 'async';
+                img.src = src;
+            });
+        }
+
+        function openInvitation() {
+            const btnWrap = document.getElementById('open-invitation-btn');
+
+            // Tải trước toàn bộ ảnh gallery/lightbox ngay khi user mở thiệp
+            preloadGalleryImages();
+
+            // Chờ ảnh có thời gian load rồi mới auto scroll
+            setTimeout(() => {
+                startAutoScroll();
+            }, 1200);
+
+            if (btnWrap) {
+                btnWrap.style.animation = 'none';
+                btnWrap.style.transition = 'opacity 5s ease';
+                btnWrap.style.pointerEvents = 'none';
+                void btnWrap.offsetWidth;
+                btnWrap.style.opacity = '0';
+            }
+
+            setTimeout(() => {
+                playMusicOnce();
+            }, 100);
+        }
 
         function openLightbox(i) {
             lbIndex = i;
