@@ -22,13 +22,20 @@
 <meta name="twitter:image" content="https://i.ibb.co/SX1qYPBB/DSC04099.jpg">
     <title>Quang Vũ & Hải Hà — 27.05.2026</title>
 
-    <!-- ===== PRELOAD ẢNH QUAN TRỌNG (LCP / Above-the-fold) ===== -->
-    <link rel="preload" as="image" href="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="https://i.ibb.co/k6cKymgs/DSC04528.jpg">
-    <link rel="preload" as="image" href="https://i.ibb.co/fYLGGtqh/DSC02404.jpg">
-    <!-- Preconnect tới CDN ảnh để giảm RTT -->
+    <!-- ===== PRECONNECT TỚI CDN ẢNH ===== -->
+    <link rel="preconnect" href="https://wsrv.nl" crossorigin>
+    <link rel="dns-prefetch" href="https://wsrv.nl">
     <link rel="preconnect" href="https://i.ibb.co" crossorigin>
     <link rel="dns-prefetch" href="https://i.ibb.co">
+
+    <!-- ===== PRELOAD ẢNH HERO GALLERY (LCP) — đã qua wsrv.nl WebP ===== -->
+    <link rel="preload" as="image"
+        href="https://wsrv.nl/?url=i.ibb.co/r2KHzp1P/DSC04137.jpg&w=1400&output=webp&q=80"
+        fetchpriority="high">
+    <link rel="preload" as="image"
+        href="https://wsrv.nl/?url=i.ibb.co/k6cKymgs/DSC04528.jpg&w=900&output=webp&q=78">
+    <link rel="preload" as="image"
+        href="https://wsrv.nl/?url=i.ibb.co/fYLGGtqh/DSC02404.jpg&w=900&output=webp&q=78">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -60,52 +67,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Libre Baskerville', serif; background: #faf8f5; color: #2c2c2c; font-weight: 400; }
 
-        /* ============================================
-           HỌA TIẾT HOA TRANG TRÍ GÓC
-        ============================================ */
-        .floral-corner {
-            position: absolute;
-            pointer-events: none;
-            z-index: 1;
-            user-select: none;
-        }
-        /* Hoa góc trên-phải */
-        .floral-tr {
-            top: 0;
-            right: 0;
-            width: 280px;
-            height: auto;
-            transform: translate(15%, -10%);
-            opacity: 0.95;
-        }
-        /* Hoa góc dưới-trái */
-        .floral-bl {
-            bottom: 0;
-            left: 0;
-            width: 320px;
-            height: auto;
-            transform: translate(-12%, 12%) scaleX(-1);
-            opacity: 0.95;
-        }
-        /* Hoa góc trên-trái */
-        .floral-tl {
-            top: 0;
-            left: 0;
-            width: 220px;
-            height: auto;
-            transform: translate(-15%, -10%) scaleX(-1);
-            opacity: 0.85;
-        }
-        /* Hoa góc dưới-phải */
-        .floral-br {
-            bottom: 0;
-            right: 0;
-            width: 240px;
-            height: auto;
-            transform: translate(12%, 12%);
-            opacity: 0.85;
-        }
-        /* Trên mobile thu nhỏ lại */
+        .floral-corner { position: absolute; pointer-events: none; z-index: 1; user-select: none; }
+        .floral-tr { top: 0; right: 0; width: 280px; height: auto; transform: translate(15%, -10%); opacity: 0.95; }
+        .floral-bl { bottom: 0; left: 0; width: 320px; height: auto; transform: translate(-12%, 12%) scaleX(-1); opacity: 0.95; }
+        .floral-tl { top: 0; left: 0; width: 220px; height: auto; transform: translate(-15%, -10%) scaleX(-1); opacity: 0.85; }
+        .floral-br { bottom: 0; right: 0; width: 240px; height: auto; transform: translate(12%, 12%); opacity: 0.85; }
         @media (max-width: 768px) {
             .floral-tr { width: 160px; }
             .floral-bl { width: 180px; }
@@ -113,7 +79,6 @@
             .floral-br { width: 140px; }
         }
 
-        /* Nền cream nhạt cho các section có hoa */
         .floral-section {
             background:
                 radial-gradient(ellipse at 80% 10%, rgba(232, 220, 195, 0.35), transparent 50%),
@@ -129,9 +94,7 @@
         @keyframes bounceZoom { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
         @keyframes heartBeat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.2); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } }
         @keyframes petalFall { 0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; } 8% { opacity: 0.5; } 85% { opacity: 0.5; } 100% { transform: translateY(105vh) rotate(540deg) translateX(80px); opacity: 0; } }
-        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.6); opacity: 0; } }
-        @keyframes floralSway { 0%, 100% { transform: translate(15%, -10%) rotate(0deg); } 50% { transform: translate(15%, -10%) rotate(2deg); } }
 
         .anim-fade-up { animation: fadeUp 1s ease-out forwards; opacity: 0; }
         .anim-fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
@@ -173,11 +136,6 @@
         .lightbox-overlay.active { opacity: 1; pointer-events: all; }
         .lightbox-overlay img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 2px; transition: opacity 0.3s ease; }
 
-        .modal-backdrop { position: fixed; inset: 0; z-index: 150; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 1rem; }
-        .modal-backdrop.active { opacity: 1; pointer-events: all; }
-        .modal-card { background: #faf8f5; border-radius: 1.5rem; max-width: 480px; width: 100%; padding: 2.5rem; transform: scale(0.92) translateY(20px); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); max-height: 90vh; overflow-y: auto; }
-        .modal-backdrop.active .modal-card { transform: scale(1) translateY(0); }
-
         .petal { position: fixed; pointer-events: none; z-index: 5; border-radius: 50% 0 50% 50%; opacity: 0; animation: petalFall linear forwards; will-change: transform, opacity; transform: translateZ(0); backface-visibility: hidden; }
 
         .noise { position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); transform: translateZ(0); will-change: transform; }
@@ -188,22 +146,11 @@
         .deco-line { height: 1px; background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.3), transparent); }
         .deco-line-dark { height: 1px; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent); }
 
-        .btn-gold { background: linear-gradient(135deg, #c9a96e, #e2d1a8); color: #2c2c2c; transition: all 0.3s ease; position: relative; overflow: hidden; }
-        .btn-gold::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #d4b87a, #eddcb8); transform: translateX(-100%); transition: transform 0.4s ease; }
-        .btn-gold:hover::after { transform: translateX(0); }
-        .btn-gold span { position: relative; z-index: 1; }
         .btn-dark { background: #2c2c2c; color: white; transition: all 0.3s ease; }
         .btn-dark:hover { background: #444; }
 
-        .form-input { width: 100%; background: transparent; border: 1px solid rgba(44, 44, 44, 0.12); border-radius: 0.75rem; padding: 0.85rem 1rem; font-family: 'Libre Baskerville', serif; font-size: 0.875rem; color: #2c2c2c; transition: border-color 0.3s ease, box-shadow 0.3s ease; outline: none; }
-        .form-input::placeholder { color: #b8b8b8; }
-        .form-input:focus { border-color: #c9a96e; box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1); }
-
         .mobile-menu { position: fixed; inset: 0; z-index: 100; background: #faf8f5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
         .mobile-menu.active { opacity: 1; pointer-events: all; }
-
-        .cal-day { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 13px; transition: all 0.3s ease; }
-        .cal-day-highlight { background: linear-gradient(135deg, #c9a96e, #e2d1a8); color: #2c2c2c; font-weight: 700; font-family: 'Cinzel', serif; font-size: 15px; box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2), 0 4px 15px rgba(201, 169, 110, 0.3); }
 
         .open-btn-wrap { transition: opacity 0.6s ease, transform 0.6s ease; }
         .open-btn-circle { position: relative; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #c9a96e, #e2d1a8); box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35); transition: transform 0.4s ease, box-shadow 0.4s ease; }
@@ -228,14 +175,14 @@
         ::-webkit-scrollbar-track { background: #faf8f5; }
         ::-webkit-scrollbar-thumb { background: #c9a96e; border-radius: 3px; }
 
-        /* Content trên hoa */
         .above-floral { position: relative; z-index: 2; }
     </style>
 </head>
 
 <body class="antialiased">
 
-    <audio id="bg-music" loop preload="auto" playsinline>
+    <!-- ===== ÂM NHẠC: preload="none" để KHÔNG cạnh tranh băng thông với ảnh ===== -->
+    <audio id="bg-music" loop preload="none" playsinline>
         <source
             src="https://res.cloudinary.com/djvwthafx/video/upload/v1778215307/Em_%C4%90%E1%BB%93ng_%C3%9D_I_Do_-_%C4%90%E1%BB%A9c_Ph%C3%BAc_x_911_Lyrics_Video_%C4%90i%E1%BB%81u_anh_%C6%B0%E1%BB%9Bc_mu%E1%BB%91n_b%C3%A2y_gi%E1%BB%9D_ngay_%C4%91%C3%A2y_r%E1%BB%93i_n8ijm3.m4a"
             type="audio/mp4">
@@ -295,13 +242,8 @@
         </div>
     </nav>
 
-    <!-- ===== HERO (CÓ HOA Ở 2 GÓC) ===== -->
+    <!-- ===== HERO ===== -->
     <section id="hero" class="floral-section relative min-h-screen flex items-center justify-center overflow-hidden pb-12">
-
-        <!-- HOA TRANG TRÍ
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tr">
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-bl"> -->
-
         <div class="relative z-10 text-center px-6 above-floral">
             <p class="text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-display anim-fade-up d2"
                 style="color: rgba(44,44,44,0.55);">
@@ -355,11 +297,8 @@
         </div>
     </section>
 
-    <!-- ===== COUPLE INFO (CÓ HOA Ở 2 GÓC) ===== -->
+    <!-- ===== COUPLE INFO ===== -->
     <section id="couple-info" class="floral-section py-20 md:py-28 px-5 md:px-10">
-
-     
-
         <div class="max-w-5xl mx-auto above-floral">
             <div class="text-center mb-14 md:mb-20 reveal">
                 <p class="text-[9px] tracking-[0.35em] uppercase font-display text-gold mb-3"
@@ -404,11 +343,10 @@
         </div>
     </section>
 
-    <!-- ===== GALLERY ===== -->
+    <!-- ===== GALLERY — ẢNH ĐI QUA wsrv.nl WebP ===== -->
     <section id="gallery">
         <div class="relative h-[50vh] md:h-[85vh] overflow-hidden reveal cursor-pointer" onclick="openLightbox(1)">
-            <!-- ẢNH HERO GALLERY: fetchpriority="high", KHÔNG lazy -->
-            <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg"
+            <img src="https://wsrv.nl/?url=i.ibb.co/r2KHzp1P/DSC04137.jpg&w=1400&output=webp&q=80"
                 alt="Gallery Hero"
                 fetchpriority="high"
                 decoding="async"
@@ -430,32 +368,30 @@
                 </div>
             </div>
         </div>
+
+        <!-- MOBILE GRID — 600px là đủ trên mobile -->
         <div class="mobile-grid px-4 pt-6 pb-4">
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/1fZSqWZP/DSC02520.jpg" alt="02"
-                    loading="lazy" decoding="async"
-                    style="object-position:center 28%;">
+                <img src="https://wsrv.nl/?url=i.ibb.co/1fZSqWZP/DSC02520.jpg&w=600&output=webp&q=75" alt="02"
+                    loading="lazy" decoding="async" style="object-position:center 28%;">
                 <p class="art-num">02</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
-                    loading="lazy" decoding="async"
-                    style="object-position:center 22%;">
+                <img src="https://wsrv.nl/?url=i.ibb.co/fYLGGtqh/DSC02404.jpg&w=600&output=webp&q=75" alt="03"
+                    loading="lazy" decoding="async" style="object-position:center 22%;">
                 <p class="art-num">03</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
-                    loading="lazy" decoding="async"
-                    style="object-position:center 22%;">
+                <img src="https://wsrv.nl/?url=i.ibb.co/YB8gyS4y/DSC03950.jpg&w=600&output=webp&q=75" alt="04"
+                    loading="lazy" decoding="async" style="object-position:center 22%;">
                 <p class="art-num">04</p>
                 <div class="art-line"></div>
             </div>
             <div class="art-gallery-item rounded-lg reveal" onclick="openLightbox(1)">
-                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="05"
-                    loading="lazy" decoding="async"
-                    style="object-position:center 22%;">
+                <img src="https://wsrv.nl/?url=i.ibb.co/r2KHzp1P/DSC04137.jpg&w=600&output=webp&q=75" alt="05"
+                    loading="lazy" decoding="async" style="object-position:center 22%;">
                 <p class="art-num">05</p>
                 <div class="art-line"></div>
             </div>
@@ -465,27 +401,26 @@
             <i data-lucide="maximize-2" class="w-3 h-3 inline-block mr-1 -mt-0.5"></i>
             Nhấn vào ảnh để xem chi tiết
         </p>
+
+        <!-- DESKTOP GRID -->
         <div class="desktop-grid grid-cols-12 gap-3 md:gap-5 max-w-6xl mx-auto px-5 md:px-10 py-8 md:py-14">
             <div class="col-span-7 art-gallery-item rounded-lg reveal" onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="02"
-                    loading="lazy" decoding="async"
-                    class="w-full"
+                <img src="https://wsrv.nl/?url=i.ibb.co/k6cKymgs/DSC04528.jpg&w=1000&output=webp&q=78" alt="02"
+                    loading="lazy" decoding="async" class="w-full"
                     style="aspect-ratio:4/5; object-fit:cover; object-position:center 28%;">
                 <p class="art-num">02</p>
                 <div class="art-line"></div>
             </div>
             <div class="col-span-5 art-gallery-item rounded-lg reveal" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
-                    loading="lazy" decoding="async"
-                    class="w-full"
+                <img src="https://wsrv.nl/?url=i.ibb.co/fYLGGtqh/DSC02404.jpg&w=800&output=webp&q=78" alt="03"
+                    loading="lazy" decoding="async" class="w-full"
                     style="aspect-ratio:3/4; object-fit:cover; object-position:center 22%;">
                 <p class="art-num">03</p>
                 <div class="art-line"></div>
             </div>
             <div class="col-span-12 art-gallery-item rounded-lg reveal" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
-                    loading="lazy" decoding="async"
-                    class="w-full"
+                <img src="https://wsrv.nl/?url=i.ibb.co/YB8gyS4y/DSC03950.jpg&w=1400&output=webp&q=78" alt="04"
+                    loading="lazy" decoding="async" class="w-full"
                     style="aspect-ratio:21/9; object-fit:cover; object-position:center 35%;">
                 <p class="art-num">04</p>
                 <div class="art-line"></div>
@@ -502,7 +437,7 @@
         </div>
     </section>
 
-    <!-- ===== OUR STORY ===== -->
+    <!-- ===== OUR STORY — scroll ngang ===== -->
     <section id="our-story" class="py-16 md:py-24 bg-dark overflow-hidden">
         <div class="max-w-6xl mx-auto px-5 md:px-10 mb-6 md:mb-12 flex items-end justify-between reveal">
             <div>
@@ -521,55 +456,55 @@
         <div class="flex gap-3 md:gap-6 overflow-x-auto px-5 md:px-10 pb-5 md:pb-6 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing"
             id="hscroll" style="scrollbar-width: none;">
             <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 68vw; max-width: 420px;" onclick="openLightbox(0)">
-                <img src="https://i.ibb.co/r2KHzp1P/DSC04137.jpg" alt="01"
+                <img src="https://wsrv.nl/?url=i.ibb.co/r2KHzp1P/DSC04137.jpg&w=800&output=webp&q=78" alt="01"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 25%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">01</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/yBh5My9M/DSC03654.jpg" alt="09"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(1)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/yBh5My9M/DSC03654.jpg&w=800&output=webp&q=78" alt="02"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">02</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(3)">
-                <img src="https://i.ibb.co/fYLGGtqh/DSC02404.jpg" alt="03"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(2)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/fYLGGtqh/DSC02404.jpg&w=800&output=webp&q=78" alt="03"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">03</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 350px;"  onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/YB8gyS4y/DSC03950.jpg" alt="04"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 350px;"  onclick="openLightbox(4)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/YB8gyS4y/DSC03950.jpg&w=800&output=webp&q=78" alt="04"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 350px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">04</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/k6cKymgs/DSC04528.jpg" alt="05"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 58vw; max-width: 360px;" onclick="openLightbox(3)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/k6cKymgs/DSC04528.jpg&w=800&output=webp&q=78" alt="05"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">05</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 340px;" onclick="openLightbox(6)">
-                <img src="https://i.ibb.co/bj5rQ41N/DSC04442.jpg" alt="06"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 48vw; max-width: 340px;" onclick="openLightbox(5)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/bj5rQ41N/DSC04442.jpg&w=800&output=webp&q=78" alt="06"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 480px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">06</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(7)">
-                <img src="https://i.ibb.co/rKF1X9cZ/DSC04326.jpg" alt="07"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(6)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/rKF1X9cZ/DSC04326.jpg&w=800&output=webp&q=78" alt="07"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 400px; object-fit: cover; object-position: center 28%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">07</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 300px;" onclick="openLightbox(8)">
-                <img src="https://i.ibb.co/7d0QTdNF/DSC02830.jpg" alt="08"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 300px;" onclick="openLightbox(7)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/7d0QTdNF/DSC02830.jpg&w=800&output=webp&q=78" alt="08"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 420px; object-fit: cover; object-position: center 22%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">08</p>
             </div>
-            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(9)">
-                <img src="https://i.ibb.co/x81Yx3yS/DSC04204.jpg" alt="09"
+            <div class="scroll-img-wrap snap-start rounded-lg overflow-hidden" style="width: 62vw; max-width: 380px;" onclick="openLightbox(8)">
+                <img src="https://wsrv.nl/?url=i.ibb.co/x81Yx3yS/DSC04204.jpg&w=800&output=webp&q=78" alt="09"
                     loading="lazy" decoding="async"
                     class="w-full rounded-lg" style="height: 460px; object-fit: cover; object-position: center 35%;">
                 <p class="scroll-num text-5xl font-display mt-1.5">09</p>
@@ -583,12 +518,10 @@
         </div>
     </section>
 
-    <!-- ===== SAVE THE DATE (CÓ HOA Ở 2 GÓC NHỎ) ===== -->
+    <!-- ===== SAVE THE DATE ===== -->
     <section id="save-date" class="floral-section py-20 md:py-32 px-5 md:px-10">
-
-        <!-- HOA TRANG TRÍ -->
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tl" loading="lazy" decoding="async">
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-br" loading="lazy" decoding="async">
+        <img src="https://wsrv.nl/?url=i.ibb.co/Pv2WfNTd/hoa.webp&w=400&output=webp&q=82" alt="" class="floral-corner floral-tl" loading="lazy" decoding="async">
+        <img src="https://wsrv.nl/?url=i.ibb.co/Pv2WfNTd/hoa.webp&w=400&output=webp&q=82" alt="" class="floral-corner floral-br" loading="lazy" decoding="async">
 
         <div class="max-w-4xl mx-auto above-floral">
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm reveal">
@@ -628,13 +561,8 @@
         </div>
     </section>
 
-    <!-- ===== PHONG BAO LÌ XÌ (CÓ HOA Ở 2 GÓC) ===== -->
+    <!-- ===== PHONG BAO LÌ XÌ ===== -->
     <section id="gift" class="floral-section py-20 md:py-28 px-5 md:px-10">
-
-        <!-- HOA TRANG TRÍ -->
-        <!-- <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-tr">
-        <img src="https://i.ibb.co/Pv2WfNTd/hoa.webp" alt="" class="floral-corner floral-bl"> -->
-
         <div class="max-w-md mx-auto above-floral">
             <div class="text-center reveal mb-8">
                 <p class="text-[9px] tracking-[0.35em] uppercase text-gold mb-3"
@@ -696,7 +624,7 @@
         </div>
     </section>
 
-    <!-- POPUP LÌ XÌ -->
+    <!-- POPUP LÌ XÌ — QR cũng qua wsrv.nl để nhanh hơn -->
     <div id="lixi-popup">
         <div class="lixi-popup-card">
             <div class="rounded-t-3xl px-6 pt-6 pb-8 text-center relative overflow-hidden"
@@ -728,7 +656,7 @@
                         <p class="text-xs text-dark/40 mb-3">Ngân hàng SHB</p>
                         <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">1413114119</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
-                            <img src="https://i.ibb.co/390N2FvR/Screenshot-2026-05-07-220211.png"
+                            <img src="https://wsrv.nl/?url=i.ibb.co/390N2FvR/Screenshot-2026-05-07-220211.png&w=400&output=webp&q=85"
                                 alt="QR chuyển khoản chú rể"
                                 loading="lazy" decoding="async"
                                 class="w-44 h-auto rounded-xl mx-auto">
@@ -750,7 +678,7 @@
                         <p class="text-xs text-dark/40 mb-3">Ngân hàng VIB</p>
                         <p class="font-display text-base text-dark font-semibold tracking-wide mt-3">027626798</p>
                         <div class="mt-4 inline-block p-3 rounded-2xl border border-dark/10 bg-white shadow-sm">
-                            <img src="https://i.ibb.co/bj6KT7qs/Screenshot-2026-05-07-220025.png"
+                            <img src="https://wsrv.nl/?url=i.ibb.co/bj6KT7qs/Screenshot-2026-05-07-220025.png&w=400&output=webp&q=85"
                                 alt="QR chuyển khoản cô dâu"
                                 loading="lazy" decoding="async"
                                 class="w-44 h-auto rounded-xl mx-auto">
@@ -785,6 +713,12 @@
     </footer>
 
     <script>
+        // ===== HÀM HELPER: tạo URL ảnh qua wsrv.nl WebP =====
+        function cdnImg(ibbUrl, w = 1400, q = 80) {
+            const clean = ibbUrl.replace(/^https?:\/\//, '');
+            return `https://wsrv.nl/?url=${clean}&w=${w}&output=webp&q=${q}`;
+        }
+
         let musicStarted = false;
         function playMusicOnce() {
             if (musicStarted) return;
@@ -795,21 +729,21 @@
             }
         }
 
+        // ===== MẢNG ẢNH LIGHTBOX — WebP 1600px chất lượng cao =====
         const images = [
-            'https://i.ibb.co/r2KHzp1P/DSC04137.jpg',
-            'https://i.ibb.co/yBh5My9M/DSC03654.jpg',
-            'https://i.ibb.co/fYLGGtqh/DSC02404.jpg',
-            'https://i.ibb.co/k6cKymgs/DSC04528.jpg',
-            'https://i.ibb.co/YB8gyS4y/DSC03950.jpg',
-            'https://i.ibb.co/bj5rQ41N/DSC04442.jpg',
-            'https://i.ibb.co/rKF1X9cZ/DSC04326.jpg',
-            'https://i.ibb.co/7d0QTdNF/DSC02830.jpg',
-            'https://i.ibb.co/x81Yx3yS/DSC04204.jpg',
-            'https://i.ibb.co/1fZSqWZP/DSC02520.jpg',
+            cdnImg('i.ibb.co/r2KHzp1P/DSC04137.jpg', 1600, 82),
+            cdnImg('i.ibb.co/yBh5My9M/DSC03654.jpg', 1600, 82),
+            cdnImg('i.ibb.co/fYLGGtqh/DSC02404.jpg', 1600, 82),
+            cdnImg('i.ibb.co/k6cKymgs/DSC04528.jpg', 1600, 82),
+            cdnImg('i.ibb.co/YB8gyS4y/DSC03950.jpg', 1600, 82),
+            cdnImg('i.ibb.co/bj5rQ41N/DSC04442.jpg', 1600, 82),
+            cdnImg('i.ibb.co/rKF1X9cZ/DSC04326.jpg', 1600, 82),
+            cdnImg('i.ibb.co/7d0QTdNF/DSC02830.jpg', 1600, 82),
+            cdnImg('i.ibb.co/x81Yx3yS/DSC04204.jpg', 1600, 82),
+            cdnImg('i.ibb.co/1fZSqWZP/DSC02520.jpg', 1600, 82),
         ];
         let lbIndex = 0;
 
-        // ===== PRELOAD TOÀN BỘ ẢNH GALLERY / LIGHTBOX =====
         function preloadGalleryImages() {
             images.forEach(src => {
                 const img = new Image();
@@ -821,13 +755,14 @@
         function openInvitation() {
             const btnWrap = document.getElementById('open-invitation-btn');
 
-            // Tải trước toàn bộ ảnh gallery/lightbox ngay khi user mở thiệp
+            // Tải trước toàn bộ ảnh gallery (WebP qua wsrv.nl — nhẹ hơn nhiều)
             preloadGalleryImages();
 
-            // Chờ ảnh có thời gian load rồi mới auto scroll
-            setTimeout(() => {
-                startAutoScroll();
-            }, 1200);
+            // Bật preload nhạc khi user thực sự mở thiệp (không tải sớm gây nghẽn ảnh)
+            const music = document.getElementById('bg-music');
+            if (music) music.preload = 'auto';
+
+            setTimeout(() => { startAutoScroll(); }, 1200);
 
             if (btnWrap) {
                 btnWrap.style.animation = 'none';
@@ -837,9 +772,7 @@
                 btnWrap.style.opacity = '0';
             }
 
-            setTimeout(() => {
-                playMusicOnce();
-            }, 100);
+            setTimeout(() => { playMusicOnce(); }, 100);
         }
 
         function openLightbox(i) {
@@ -868,8 +801,7 @@
 
         lucide.createIcons();
 
-        const navbar = document.getElementById('navbar'), navLogo = document.getElementById('nav-logo'),
-            menuBtn = document.getElementById('menu-btn'), navLinks = document.querySelectorAll('.nav-link');
+        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             const y = window.scrollY;
             if (y > 80) {
